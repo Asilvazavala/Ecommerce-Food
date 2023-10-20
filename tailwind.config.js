@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -17,6 +17,12 @@ module.exports = {
     },
     extend: {
       colors: {
+        Primary: '#fff',
+        Secondary: '#dedede',
+        Accent: '#ec7c6a',
+        DarkPrimary: '#1F1D2B',
+        DarkSecondary: '#262837',
+        DarkAccent: '#ec7c6a',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
