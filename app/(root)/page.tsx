@@ -1,7 +1,13 @@
+import Cards from "@/components/Cards";
+import Filters from "@/components/Filters";
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
-    <main className='bg-Secondary dark:bg-DarkSecondary w-full h-screen'>
-
-    </main>
+    <section className='bg-Secondary dark:bg-DarkSecondary w-full h-screen px-4 lg:pl-36'>
+      <Header />
+      <Filters />
+      <Cards />
+    </section>
   )
 }

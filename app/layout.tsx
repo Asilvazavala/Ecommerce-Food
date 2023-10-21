@@ -18,8 +18,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Sidebar />
-        <MobileSidebar />
         {children}
+        <MobileSidebar />
       </body>
     </html>
   )

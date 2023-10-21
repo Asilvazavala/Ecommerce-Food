@@ -21,14 +21,14 @@ const ToggleTheme: React.FC = () => {
   return (
     <small 
       onClick={toggleDarkMode} 
-      className='px-4 py-2 rounded-xl flex flex-col justify-center items-center cursor-pointer hover:bg-Secondary dark:hover:bg-DarkSecondary transition-colors'
+      className='group-hover:bg-Accent p-2 flex flex-col justify-center items-center rounded-lg text-Accent group-hover:text-black dark:group-hover:text-white transition-colors relative'
     >
       {isDarkMode 
         ? <RiMoonFill className='text-2xl' />
         : <RiSunFill className='text-2xl' />
       }
       <button>
-        {isDarkMode ? 'Modo Oscuro' : 'Modo Claro'}
+        {isDarkMode ? 'Oscuro' : 'Claro'}
       </button>
     </small>
   );
