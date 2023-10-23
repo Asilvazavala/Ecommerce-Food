@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Sidebar from '@/components/shared/Sidebar'
 import MobileSidebar from '@/components/shared/MobileSidebar'
-
+import MobileNavbar from '@/components/shared/MobileNavbar'
 
 export const metadata: Metadata = {
   title: 'Admin Dashboard',
@@ -16,8 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className='dark'>
         <Sidebar />
+        <MobileNavbar />
         {children}
         <MobileSidebar />
       </body>
