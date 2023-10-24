@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import ToggleTheme from "@/helpers/ToggleTheme";
 import Search from "../Search";
+import Logo from '../../public/images/Logo.png'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const MobileNavbar: React.FC = () => {
 
@@ -33,7 +36,17 @@ const MobileNavbar: React.FC = () => {
     <section className="sm:hidden">
       <main className={`fixed transition-transform flex justify-between items-center gap-4 bg-Primary dark:bg-DarkPrimary px-4 py-2 w-full
       ${isVisible ? '' : '-translate-y-20'}`}>
-        <p>Logo</p>
+        <picture className='flex items-center justify-center'>
+          <Link href={"/"}>
+            <Image
+              src={Logo}
+              width={50}
+              height={50}
+              alt='Logo'  
+              className='object-cover shadow-xl rounded-full'
+            />
+          </Link>
+        </picture>
         <Search />
         <ToggleTheme />
       </main>

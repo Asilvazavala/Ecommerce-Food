@@ -1,0 +1,114 @@
+[
+  {
+    "nombre": "Hamburguesa a la parrilla",
+    "descripcion": "Hamburguesa a la parrilla",
+    "imagen": "https://www.facebook.com/photo/?fbid=826550516139506&set=pb.100063536952445.-2207520000",
+    "categoria": "Hamburguesas",
+    "cantidad": 10,
+    "precio": 90
+  },
+  {
+    "nombre": "Hamburguesa bigotona",
+    "descripcion": "Hamburguesa bigotona",
+    "imagen": "https://www.facebook.com/photo/?fbid=826550512806173&set=pb.100063536952445.-2207520000",
+    "categoria": "Hamburguesas",
+    "cantidad": 10,
+    "precio": 110
+  },
+  {
+    "nombre": "Chesse burger",
+    "descripcion": "Chesse burger",
+    "imagen": "https://www.facebook.com/photo/?fbid=825130526281505&set=pb.100063536952445.-2207520000",
+    "categoria": "Hamburguesas",
+    "cantidad": 10,
+    "precio": 70
+  },
+  {
+    "nombre": "Hamburguesa cordon blue",
+    "descripcion": "Hamburguesa cordon blue",
+    "imagen": "https://facebook.com/photo/?fbid=775759731218585&set=pb.100063536952445.-2207520000",
+    "categoria": "Hamburguesas",
+    "cantidad": 10,
+    "precio": 80
+  },
+  {
+    "nombre": "Paquete 1",
+    "descripcion": "1kg de arrachera - Medio de costilla - Medio de chistorra",
+    "imagen": "https://www.facebook.com/photo?fbid=860158239445400&set=pb.100063536952445.-2207520000",
+    "categoria": "Paquetes",
+    "cantidad": 10,
+    "precio": 600
+  },
+  {
+    "nombre": "Paquete 2",
+    "descripcion": "1kg de arrachera - 2 piezas de chorizo",
+    "imagen": "https://www.facebook.com/photo?fbid=860158239445400&set=pb.100063536952445.-2207520000",
+    "categoria": "Paquetes",
+    "cantidad": 10,
+    "precio": 500
+  },
+  {
+    "nombre": "Paquete 3",
+    "descripcion": "medio de arrachera - medio de chistorra",
+    "imagen": "https://www.facebook.com/photo?fbid=860158239445400&set=pb.100063536952445.-2207520000",
+    "categoria": "Paquetes",
+    "cantidad": 10,
+    "precio": 400
+  },
+  {
+    "nombre": "Limonada",
+    "descripcion": "Limonada",
+    "imagen": "https://www.facebook.com/photo/?fbid=825130529614838&set=pb.100063536952445.-2207520000",
+    "categoria": "Bebidas",
+    "cantidad": 10,
+    "precio": 50
+  },
+  {
+    "nombre": "Cerveza",
+    "descripcion": "Cerveza",
+    "imagen": "https://www.facebook.com/photo/?fbid=762259025901989&set=pb.100063536952445.-2207520000",
+    "categoria": "Bebidas",
+    "cantidad": 10,
+    "precio": 60
+  },
+  {
+    "nombre": "Alitas BBQ",
+    "descripcion": "Alitas BBQ",
+    "imagen": "https://www.facebook.com/photo/?fbid=858804419580782&set=pb.100063536952445.-2207520000",
+    "categoria": "Snacks",
+    "cantidad": 10,
+    "precio": 70
+  },
+  {
+    "nombre": "Alitas a la parrilla",
+    "descripcion": "Alitas a la parrilla",
+    "imagen": "https://www.facebook.com/photo/?fbid=759846459476579&set=pb.100063536952445.-2207520000",
+    "categoria": "Snacks",
+    "cantidad": 10,
+    "precio": 100
+  },
+  {
+    "nombre": "Hot dog",
+    "descripcion": "Hot dog",
+    "imagen": "https://www.facebook.com/photo/?fbid=761058106022081&set=pb.100063536952445.-2207520000",
+    "categoria": "Snacks",
+    "cantidad": 10,
+    "precio": 70
+  },
+  {
+    "nombre": "Combo Friends",
+    "descripcion": "Costillas + papas gajo + aros de cebolla + alitas + boneless",
+    "imagen": "https://www.facebook.com/photo/?fbid=853956463398911&set=pb.100063536952445.-2207520000",
+    "categoria": "Paquetes",
+    "cantidad": 10,
+    "precio": 100
+  },
+  {
+    "nombre": "Combo Monster",
+    "descripcion": "Hamburgiesa + papas + boneless",
+    "imagen": "https://www.facebook.com/photo/?fbid=850696223724935&set=pb.100063536952445.-2207520000",
+    "categoria": "Paquetes",
+    "cantidad": 10,
+    "precio": 170
+  }
+]

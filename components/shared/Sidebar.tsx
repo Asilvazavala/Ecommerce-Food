@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { RiHome6Line } from "react-icons/ri";
 import { IoFastFoodOutline, IoPersonSharp } from "react-icons/io5";
 import { FaMotorcycle } from "react-icons/fa";
+import Logo from '../../public/images/Logo.png'
+import Image from 'next/image';
 
 const Sidebar: React.FC = () => {  
   const [currentLink, setCurrentLink] = useState<string>('inicio');
@@ -14,8 +16,16 @@ const Sidebar: React.FC = () => {
     <nav className="fixed hidden md:flex py-5 bg-Primary dark:bg-DarkPrimary left-0 top-0 w-28 h-full flex-col justify-between">
       <article>
         <ul className='pl-4 relative'>
-          <li>
-            <h1 className="text-2xl uppercase font-bold text-center mb-5">Logo</h1>
+          <li className='flex items-center justify-center'>
+            <Link href={"/"}>
+              <Image
+                src={Logo}
+                width={80}
+                height={80}
+                alt='Logo'  
+                className='object-cover shadow-xl rounded-full mb-5'
+              />
+            </Link>
           </li>
           
           <li className={`p-4 rounded-tl-xl rounded-bl-xl hover:bg-Secondary dark:hover:bg-DarkSecondary group transition-colors

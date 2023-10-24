@@ -3,6 +3,7 @@ import './globals.css'
 import Sidebar from '@/components/shared/Sidebar'
 import MobileSidebar from '@/components/shared/MobileSidebar'
 import MobileNavbar from '@/components/shared/MobileNavbar'
+import { FoodProvider } from '../hooks/FoodContext'
 
 export const metadata: Metadata = {
   title: 'Admin Dashboard',
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='dark'>
-        <Sidebar />
-        <MobileNavbar />
-        {children}
-        <MobileSidebar />
+        <FoodProvider>
+          <Sidebar />
+          <MobileNavbar />
+          {children}
+          <MobileSidebar />
+        </FoodProvider>
       </body>
     </html>
   )
