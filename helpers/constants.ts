@@ -14,9 +14,13 @@ export const formatedDate = `${day} ${months[month]} del ${year}`;
 
 export const slides = [
   {
-    url: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    url: 'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    name:" Promo 1",
+    categoria: 'Hamburguesas'
   },
   {
-    url: 'https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    url: 'https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    name:" Promo 2",
+    categoria: 'Paquetes'
   },
 ]

@@ -37,7 +37,7 @@ const Filters: React.FC = () => {
         </button>
       </nav>
 
-      <h2 className="text-xl my-8 text-DarkPrimary dark:text-Primary text-center md:text-left">Elige tus {currentFilter}</h2>
+      <h2 id='cardsTitle' className="text-xl my-8 text-DarkPrimary dark:text-Primary text-center md:text-left">Elige tus {currentFilter}</h2>
     </section>
   )
 };

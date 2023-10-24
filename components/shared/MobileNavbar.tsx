@@ -34,7 +34,7 @@ const MobileNavbar: React.FC = () => {
 
   return (
     <section className="sm:hidden">
-      <main className={`fixed transition-transform flex justify-between items-center gap-4 bg-Primary dark:bg-DarkPrimary px-4 py-2 w-full
+      <main className={`fixed z-50 transition-transform flex justify-between items-center gap-4 bg-Primary dark:bg-DarkPrimary px-4 py-2 w-full
       ${isVisible ? '' : '-translate-y-20'}`}>
         <picture className='flex items-center justify-center'>
           <Link href={"/"}>
