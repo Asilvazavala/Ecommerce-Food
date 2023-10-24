@@ -6,7 +6,7 @@ import Loading from './Loading';
 import Platillo from '../public/images/Platillo_comida.png';
 
 const Cards: React.FC = () => {
-  const { currentFoodData } = useFoods();
+  const { currentFoodData, search, currentFilter } = useFoods();
 
   return (
     <section>
@@ -22,11 +22,17 @@ const Cards: React.FC = () => {
                   alt={food.nombre}  
                   className='object-cover -mt-20 shadow-xl rounded-full'
                 />
-                <p className='text-xl text-center'>{food.descripcion}</p>
+                <h2 className='text-lg text-center font-bold'>{food.nombre}</h2>
+                <p className='text-center text-gray-500'>{food.descripcion}</p>
                 <span className='text-Accent font-bold text-2xl'>${food.precio}</span>
               </article>
             ))
-            : <Loading />
+            : search !== '' 
+              ? <span 
+                  className='bg-red-300 text-red-600 w-fit rounded-full px-2 py-1 text-center'>
+                  No hay productos <strong>{search}</strong> en la categoría <strong>{currentFilter}</strong>
+                </span>
+              : <Loading />
         }
       </main>
     </section>

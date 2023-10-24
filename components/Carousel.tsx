@@ -93,13 +93,13 @@ const Carousel: React.FC = () => {
         />  
       </Link>  
       <small 
-        className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-80%] left-5 
+        className='hidden lg:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-80%] left-5 
         text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer hover:bg-Accent transition-colors'>
         <IoIosArrowBack onClick={prevSlide} />
       </small>
 
       <small 
-        className='hidden group-hover:block absolute top-[50%] -translate-x-0 -translate-y-[80%] right-5
+        className='hidden lg:group-hover:block absolute top-[50%] -translate-x-0 -translate-y-[80%] right-5
         text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer hover:bg-Accent transition-colors'>
         <IoIosArrowForward onClick={nextSlide} />
       </small>
