@@ -2,15 +2,25 @@
 
 import { BsSearch } from "react-icons/bs";
 import { useFoods } from '../hooks/FoodContext';
+import { useRouter } from 'next/navigation';
 
 const Search: React.FC = () => {
   const { search, setSearch } = useFoods();
+  const router = useRouter();
+
+  const submitSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push("#cardsTitle");
+  }
 
   return (
     <section className="text-DarkPrimary w-full">
-      <form action="">
+      <form onSubmit={submitSearch}>
         <article className="relative">
-          <BsSearch className="absolute left-3 top-1/2 -translate-y-1/2" />
+          <BsSearch 
+            onClick={submitSearch} 
+            className="absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer" 
+          />
           <input 
             type="text" 
             value={search}

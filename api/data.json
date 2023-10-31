@@ -10,7 +10,7 @@
   {
     "nombre": "Hamburguesa bigotona",
     "descripcion": "Hamburguesa con tocino y chiles jalapeños",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Hamburguesas",
     "cantidad": 10,
     "precio": 110
@@ -26,7 +26,7 @@
   {
     "nombre": "Hamburguesa cordon blue",
     "descripcion": "Hamburguesa con milanesa y jamón",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Hamburguesas",
     "cantidad": 10,
     "precio": 80
@@ -34,7 +34,7 @@
   {
     "nombre": "Paquete 1",
     "descripcion": "1kg de arrachera - Medio de costilla - Medio de chistorra",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
     "cantidad": 10,
     "precio": 600
@@ -42,7 +42,7 @@
   {
     "nombre": "Paquete 2",
     "descripcion": "1kg de arrachera - 2 piezas de chorizo",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
     "cantidad": 10,
     "precio": 500
@@ -50,7 +50,7 @@
   {
     "nombre": "Paquete 3",
     "descripcion": "medio de arrachera - medio de chistorra",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
     "cantidad": 10,
     "precio": 400
@@ -74,7 +74,7 @@
   {
     "nombre": "Alitas BBQ",
     "descripcion": "Alitas con nuestra mejor salsa",
-    "imagen": "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Snacks",
     "cantidad": 10,
     "precio": 70
@@ -82,7 +82,7 @@
   {
     "nombre": "Alitas a la parrilla",
     "descripcion": "Alitas a la parrilla",
-    "imagen": "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Snacks",
     "cantidad": 10,
     "precio": 100
@@ -98,7 +98,7 @@
   {
     "nombre": "Combo Friends",
     "descripcion": "Costillas + papas gajo + aros de cebolla + alitas + boneless",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
     "cantidad": 10,
     "precio": 100
@@ -106,7 +106,7 @@
   {
     "nombre": "Combo Monster",
     "descripcion": "Hamburgiesa + papas + boneless",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
     "cantidad": 10,
     "precio": 170
