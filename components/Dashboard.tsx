@@ -1,6 +1,5 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
 import { Modal } from "./ui/modal";
 
 const Dashboard: React.FC = () => {
