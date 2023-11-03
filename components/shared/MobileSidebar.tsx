@@ -34,7 +34,7 @@ const MobileSidebar: React.FC = () => {
   return (
     <nav className="md:hidden bg-Secondary dark:bg-DarkSecondary block bottom-0 w-full min-h-screen">
       <ul
-        className={`fixed transition-transform w-full flex justify-between items-center bottom-0 left-0 bg-Primary dark:bg-DarkPrimary text-3xl text-gray-500 dark:text-gray-400 pb-2 px-3
+        className={`z-50 fixed transition-transform w-full flex justify-between items-center bottom-0 left-0 bg-Primary dark:bg-DarkPrimary text-3xl text-gray-500 dark:text-gray-400 pb-2 px-3
         ${isVisible ? '' : 'translate-y-20'}`}>
         <li>
           <Link 

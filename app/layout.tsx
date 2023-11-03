@@ -19,14 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='dark'>
-        <ClerkProvider>
+        {/* <ClerkProvider> */}
           <FoodProvider>
-            {/* <Sidebar />
-            <MobileNavbar /> */}
+            <Sidebar />
+            <MobileNavbar />
             {children}
-            {/* <MobileSidebar /> */}
+            <MobileSidebar />
           </FoodProvider>
-        </ClerkProvider>
+        {/* </ClerkProvider> */}
       </body>
     </html>
   )

@@ -75,7 +75,7 @@ const Carousel: React.FC = () => {
   return (
     <section 
       ref={carouselRef}
-      className="relative group mb-2 max-w-[1400px] w-full"
+      className="relative group mb-2 max-w-[800px] w-full mx-auto"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -89,7 +89,7 @@ const Carousel: React.FC = () => {
           alt={slides[currentIndex].name}  
           onMouseEnter={() => setChangeCarouselImage(false)}
           onMouseLeave={() => setChangeCarouselImage(true)}
-          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[350px]'
+          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[450px]'
         />  
       </Link>  
       <small 

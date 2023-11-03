@@ -14,13 +14,15 @@ const Cards: React.FC = () => {
         {
           currentFoodData.length > 0 
             ? currentFoodData.map((food) => (
-              <article key={food.nombre} className='bg-Primary dark:bg-DarkPrimary py-8 px-12 rounded-xl flex flex-col items-center gap-2 shadow-md'>
+              <article 
+                key={food.nombre} 
+                className='bg-Primary dark:bg-DarkPrimary py-8 px-12 rounded-xl flex flex-col items-center gap-2 shadow-md hover:outline hover:outline-Accent cursor-pointer'>
                 <Image
                   src={food.imagen}
                   width={150}
                   height={150}
                   alt={food.nombre}  
-                  className='object-cover aspect-square max-w-[150px] max-h-[150px] -mt-28 shadow-xl rounded-full'
+                  className='object-cover aspect-square max-w-[150px] max-h-[150px] -mt-28 shadow-xl rounded-full z-10'
                 />
                 <h2 className='text-lg text-center font-bold'>{food.nombre}</h2>
                 <p className='text-center text-gray-500'>{food.descripcion}</p>
