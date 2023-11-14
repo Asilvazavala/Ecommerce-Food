@@ -75,7 +75,7 @@ const Carousel: React.FC = () => {
   return (
     <section 
       ref={carouselRef}
-      className="relative group mb-2 max-w-[800px] w-full mx-auto"
+      className="relative group mb-2 max-w-[800px] w-full"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -84,7 +84,7 @@ const Carousel: React.FC = () => {
         <Image
           onClick={() => setCurrentFilter(slides[currentIndex].categoria)}
           src={slides[currentIndex].url}
-          width={200}
+          width={400}
           height={200}
           alt={slides[currentIndex].name}  
           onMouseEnter={() => setChangeCarouselImage(false)}

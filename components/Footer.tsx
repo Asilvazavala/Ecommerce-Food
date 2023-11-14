@@ -19,9 +19,24 @@ const Footer: React.FC = () => {
           </Link>
         </picture>
         <aside className='flex justify-center items-center gap-4 text-3xl'>
-          <Link rel='noreferrer' target='_blank' href={"https://www.facebook.com/"}><BsFacebook className="hover:text-Accent transition-colors" /></Link>
-          <Link rel='noreferrer' target='_blank' href={"https://www.whatsapp.com/"}><BsWhatsapp className="hover:text-Accent transition-colors" /></Link>
-          <Link rel='noreferrer' target='_blank' href={"https://www.instagram.com/"}><BsInstagram className="hover:text-Accent transition-colors" /></Link>
+          <Link 
+            rel='noreferrer' 
+            target='_blank' 
+            href={"https://www.facebook.com/"}
+          ><BsFacebook className="hover:text-Accent transition-colors" />
+          </Link>
+          <Link 
+            rel='noreferrer' 
+            target='_blank' 
+            href={"https://www.whatsapp.com/"}
+          ><BsWhatsapp className="hover:text-Accent transition-colors" />
+          </Link>
+          <Link 
+            rel='noreferrer' 
+            target='_blank' 
+            href={"https://www.instagram.com/"}
+          ><BsInstagram className="hover:text-Accent transition-colors" />
+          </Link>
         </aside>
       </article>
 

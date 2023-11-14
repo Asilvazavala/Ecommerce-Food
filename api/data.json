@@ -1,5 +1,6 @@
 [
   {
+    "id": 1, 
     "nombre": "Hamburguesa original",
     "descripcion": "Hamburguesa con jamón y queso",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -8,6 +9,7 @@
     "precio": 90
   },
   {
+    "id": 2,
     "nombre": "Hamburguesa bigotona",
     "descripcion": "Hamburguesa con tocino y chiles jalapeños",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -16,6 +18,7 @@
     "precio": 110
   },
   {
+    "id": 3,
     "nombre": "Chesse burger",
     "descripcion": "Hamburguesa con doble queso",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -24,6 +27,7 @@
     "precio": 70
   },
   {
+    "id": 4,
     "nombre": "Hamburguesa cordon blue",
     "descripcion": "Hamburguesa con milanesa y jamón",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -32,6 +36,7 @@
     "precio": 80
   },
   {
+    "id": 5,
     "nombre": "Paquete 1",
     "descripcion": "1kg de arrachera - Medio de costilla - Medio de chistorra",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -40,6 +45,7 @@
     "precio": 600
   },
   {
+    "id": 6,
     "nombre": "Paquete 2",
     "descripcion": "1kg de arrachera - 2 piezas de chorizo",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -48,6 +54,7 @@
     "precio": 500
   },
   {
+    "id": 7,
     "nombre": "Paquete 3",
     "descripcion": "medio de arrachera - medio de chistorra",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -56,6 +63,7 @@
     "precio": 400
   },
   {
+    "id": 8,
     "nombre": "Limonada",
     "descripcion": "Hecha con ingredientes naturales",
     "imagen": "https://images.pexels.com/photos/5538225/pexels-photo-5538225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -64,6 +72,7 @@
     "precio": 50
   },
   {
+    "id": 9,
     "nombre": "Cerveza",
     "descripcion": "Cerveza Tecate",
     "imagen": "https://images.pexels.com/photos/5538225/pexels-photo-5538225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -72,6 +81,7 @@
     "precio": 60
   },
   {
+    "id": 10,
     "nombre": "Alitas BBQ",
     "descripcion": "Alitas con nuestra mejor salsa",
     "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -80,6 +90,7 @@
     "precio": 70
   },
   {
+    "id": 11,
     "nombre": "Alitas a la parrilla",
     "descripcion": "Alitas a la parrilla",
     "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -88,6 +99,7 @@
     "precio": 100
   },
   {
+    "id": 12,
     "nombre": "Hot dog",
     "descripcion": "Acompañado de tocino",
     "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -96,6 +108,7 @@
     "precio": 70
   },
   {
+    "id": 13,
     "nombre": "Combo Friends",
     "descripcion": "Costillas + papas gajo + aros de cebolla + alitas + boneless",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -104,6 +117,7 @@
     "precio": 100
   },
   {
+    "id": 14,
     "nombre": "Combo Monster",
     "descripcion": "Hamburgiesa + papas + boneless",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",

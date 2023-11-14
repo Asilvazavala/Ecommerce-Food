@@ -79,6 +79,5 @@ body,
   }
   body {
     @apply bg-background text-foreground;
-    @apply font-serif;
   }
 }

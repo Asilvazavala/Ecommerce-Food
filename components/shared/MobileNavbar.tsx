@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import ToggleTheme from "@/helpers/ToggleTheme";
 import Search from "../Search";
 import Logo from '../../public/images/Logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
+import CartIcon from '../CartIcon';
 
 const MobileNavbar: React.FC = () => {
 
@@ -48,7 +48,7 @@ const MobileNavbar: React.FC = () => {
           </Link>
         </picture>
         <Search />
-        <ToggleTheme />
+        <CartIcon />
       </main>
     </section>
   )
