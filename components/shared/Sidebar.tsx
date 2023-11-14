@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-import ToggleTheme from '@/helpers/ToggleTheme';
 import Logo from '../../public/images/Logo.png'
 import { links } from '../../helpers/constants';
 
@@ -44,17 +43,6 @@ const Sidebar: React.FC = () => {
               </li>
             ))
           }
-        </ul>
-      </article>
-
-      <article>
-        <ul className='pl-4 relative'>
-          <li className='p-4 rounded-tl-xl rounded-bl-xl hover:bg-Secondary dark:hover:bg-DarkSecondary group transition-colors'>
-            <div 
-              className='cursor-pointer'>
-              <ToggleTheme />
-            </div>
-          </li>
         </ul>
       </article>
     </nav>
