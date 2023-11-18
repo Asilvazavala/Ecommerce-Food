@@ -14,6 +14,8 @@ type FoodContextType = {
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   detailsFood: APIArracheraBurger | undefined;
   setDetailsFood: React.Dispatch<React.SetStateAction<APIArracheraBurger | undefined>>;
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 // Crea el contexto
@@ -38,6 +40,7 @@ export function FoodProvider({ children }: FoodProviderProps) {
   const [currentFilter, setCurrentFilter] = useState<string | null>(null);
   const [search, setSearch] = useState<string>("");
   const [detailsFood, setDetailsFood] = useState<APIArracheraBurger | undefined>();
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const data: APIArracheraBurger[] = db as APIArracheraBurger[];
 
@@ -61,6 +64,8 @@ export function FoodProvider({ children }: FoodProviderProps) {
     setSearch,
     detailsFood,
     setDetailsFood,
+    isDarkMode,
+    setIsDarkMode
   };
 
   return (

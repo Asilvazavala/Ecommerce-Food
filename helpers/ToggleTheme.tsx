@@ -1,9 +1,10 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useFoods } from '../hooks/FoodContext';
 
 const ToggleTheme = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { isDarkMode, setIsDarkMode } = useFoods();
 
   useEffect(() => {
     if (isDarkMode) {

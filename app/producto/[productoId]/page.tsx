@@ -1,23 +1,24 @@
-"use client";
+'use client'
 
-import { useFoods } from "@/hooks/FoodContext";
+import { Error404 } from "@/components/Error404";
+import  Product  from "@/components/Product";
+import { useParams } from "next/navigation";
+import db from '../../../api/data.json';
 
-interface ProductPageProps {
-  params: {
-    productId: string;
-  }
-}
+export default function Page() {
+  const router = useParams();
+  const productoId = router.productoId;
 
-const ProductPage: React.FC<ProductPageProps> = ({
-  params
-}) => {
-  const { currentFoodData, search, currentFilter } = useFoods();
-
+  const filteredPage = db.find((product) => product.id === Number(productoId));
+  const relatedProducts = db.filter((product) => product.categoria === filteredPage?.categoria)
+  const relatedProductsSliced = relatedProducts.slice(0, 4)
+  
   return (
-    <section className="ml-28">
-      Hola
-    </section>
+    <>
+      {filteredPage
+        ? <Product producto={filteredPage} relatedProducts={relatedProductsSliced} /> 
+        : <Error404 />
+      }
+    </>
   )
-};
-
-export default ProductPage;
+}

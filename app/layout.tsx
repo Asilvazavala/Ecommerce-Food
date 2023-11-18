@@ -5,6 +5,7 @@ import Sidebar from '@/components/shared/Sidebar'
 import MobileSidebar from '@/components/shared/MobileSidebar'
 import MobileNavbar from '@/components/shared/MobileNavbar'
 import { FoodProvider } from '../hooks/FoodContext'
+import ToastProvider from '@/providers/toastProvider';
 
 export const metadata: Metadata = {
   title: 'Arrachera burger',
@@ -22,6 +23,7 @@ export default function RootLayout({
         <FoodProvider>
           <Sidebar />
           <MobileNavbar />
+          <ToastProvider />
           {children}
           <MobileSidebar />
         </FoodProvider>

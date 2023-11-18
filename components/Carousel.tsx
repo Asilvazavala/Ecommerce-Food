@@ -8,7 +8,14 @@ import { useState, useRef, useEffect  } from 'react';
 import Link from 'next/link';
 import { useFoods } from '../hooks/FoodContext';
 
-const Carousel: React.FC = () => {
+import { Billboard as BillboardType } from '@/types/types';
+interface BillboardProps {
+  data: BillboardType
+};
+
+const Carousel: React.FC<BillboardProps> = ({
+  data
+}) => {
   const { setCurrentFilter } = useFoods();
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -75,7 +82,7 @@ const Carousel: React.FC = () => {
   return (
     <section 
       ref={carouselRef}
-      className="relative group mb-2 max-w-[800px] w-full"
+      className="relative group mb-2 max-w-[1400px] w-full"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -89,7 +96,7 @@ const Carousel: React.FC = () => {
           alt={slides[currentIndex].name}  
           onMouseEnter={() => setChangeCarouselImage(false)}
           onMouseLeave={() => setChangeCarouselImage(true)}
-          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[450px]'
+          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[450px] aspect-[1/1]'
         />  
       </Link>  
       <small 

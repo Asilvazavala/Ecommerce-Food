@@ -6,8 +6,17 @@ import Loading from './Loading';
 import IconButton from './IconButton';
 import { Expand, ShoppingCart } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { formatter } from '../lib/utils';
 
-const Cards: React.FC = () => {
+import { Product } from '@/types/types';
+interface ProductListProps {
+  items: Product[];
+}
+
+// const Cards: React.FC<ProductListProps> = ({
+//   items
+// }) => {
+const Cards = () => {
   const { currentFoodData, search, currentFilter } = useFoods();
 
   const router = useRouter();
@@ -18,7 +27,7 @@ const Cards: React.FC = () => {
 
   return (
     <section>
-      <main className='mt-24 grid grid-cols-1 gap-x-16 gap-y-28 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 pb-10'>
+      <main className='mt-24 grid grid-cols-2 gap-x-5 md:gap-x-16 gap-y-28 lg:grid-cols-3 2xl:grid-cols-4 pb-10'>
         {
           currentFoodData.length > 0 
             ? currentFoodData.map((food) => (
@@ -34,7 +43,7 @@ const Cards: React.FC = () => {
                     width={150}
                     height={150}
                     alt={food.nombre}  
-                    className='object-cover aspect-square max-w-[150px] max-h-[150px] -mt-28 shadow-xl rounded-full z-10'
+                    className='object-cover aspect-square max-w-[120px] max-h-[120px] md:max-w-[150px] md:max-h-[150px] lg:-mt-28 -mt-[5.5rem] shadow-xl rounded-full z-10'
                   />
                   <footer className='opacity-0 group-hover:opacity-100 absolute w-full px-6 bottom-5'>
                     <div className='flex gap-x-6 justify-center'>
@@ -51,7 +60,7 @@ const Cards: React.FC = () => {
                 </div>
                 <h2 className='text-lg text-center font-bold'>{food.nombre}</h2>
                 <p className='text-center text-gray-500'>{food.descripcion}</p>
-                <span className='text-Accent font-bold text-2xl'>${food.precio}</span>
+                <span className='text-Accent font-bold text-2xl'>{formatter.format(food.precio)}</span>
               </article>
             ))
             : search !== '' 
