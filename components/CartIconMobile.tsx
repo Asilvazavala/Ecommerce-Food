@@ -5,7 +5,7 @@ import { ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
 import SidebarCart from './shared/SidebarCart';
 
-const CartIcon: React.FC = () => {
+const CartIconMobile: React.FC = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   const cart = useCart();
@@ -14,9 +14,7 @@ const CartIcon: React.FC = () => {
     <section className='relative'>
       <button 
         onClick={() => setOpenSidebar(!openSidebar)}
-        className='hidden md:flex items-center bg-Primary dark:bg-DarkPrimary 
-        rounded-full px-4 py-2 hover:outline hover:outline-Accent
-        fixed right-7 top-7 z-10'>
+        className='flex items-center bg-Primary dark:bg-DarkPrimary z-10 md:hidden'>
         <ShoppingBag
           size={20}
           className='text-Accent font-bold'
@@ -27,10 +25,10 @@ const CartIcon: React.FC = () => {
       </button>
       <SidebarCart 
         onOpen={openSidebar} 
-        onClose={setOpenSidebar} 
+        onClose={setOpenSidebar}
       />
     </section>
   )
 };
 
-export default CartIcon;
+export default CartIconMobile;

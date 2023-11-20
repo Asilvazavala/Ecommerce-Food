@@ -5,7 +5,7 @@ import Search from "../Search";
 import Logo from '../../public/images/Logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
-import CartIcon from '../CartIcon';
+import CartIconMobile from '../CartIconMobile';
 
 const MobileNavbar: React.FC = () => {
 
@@ -48,7 +48,7 @@ const MobileNavbar: React.FC = () => {
           </Link>
         </picture>
         <Search />
-        <CartIcon />
+        <CartIconMobile />
       </main>
     </section>
   )

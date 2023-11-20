@@ -1,5 +1,6 @@
+"use client";
+
 import { formatedDate } from '../helpers/constants';
-import CartIcon from './CartIcon';
 
 const Header: React.FC = () => {
   return (
@@ -11,9 +12,6 @@ const Header: React.FC = () => {
             <p className="text-gray-500">{formatedDate}</p>
           </article>
           
-          <article className='hidden md:flex ml-auto items-center gap-x-4'>
-            <CartIcon />
-          </article>
         </header>
       </main>
     </section>

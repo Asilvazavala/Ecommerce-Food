@@ -8,7 +8,8 @@ import { Expand, ShoppingCart } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { formatter } from '../lib/utils';
 
-import { Product } from '@/types/types';
+import { APIArracheraBurger, Product } from '@/types/types';
+import useCart from '@/hooks/use-cart';
 interface ProductListProps {
   items: Product[];
 }
@@ -18,11 +19,16 @@ interface ProductListProps {
 // }) => {
 const Cards = () => {
   const { currentFoodData, search, currentFilter } = useFoods();
+  const cart = useCart();
 
   const router = useRouter();
 
   const handleClick = (id: number) => {
     router.push(`/producto/${id}`);
+  }
+
+  const onAddToCart = (producto: APIArracheraBurger) => {
+    cart.addItem(producto)
   }
 
   return (
@@ -45,18 +51,14 @@ const Cards = () => {
                     alt={food.nombre}  
                     className='object-cover aspect-square max-w-[120px] max-h-[120px] md:max-w-[150px] md:max-h-[150px] lg:-mt-28 -mt-[5.5rem] shadow-xl rounded-full z-10'
                   />
-                  <footer className='opacity-0 group-hover:opacity-100 absolute w-full px-6 bottom-5'>
+                  {/* <footer className='opacity-0 group-hover:opacity-100 absolute w-full px-6 bottom-5'>
                     <div className='flex gap-x-6 justify-center'>
                       <IconButton 
-                        onClick={() => {}}
-                        icon={<Expand size={20} className='text-Accent' />}
-                      />
-                      <IconButton 
-                        onClick={() => {}}
+                        onClick={() => onAddToCart(food)}
                         icon={<ShoppingCart size={20} className='text-Accent' />}
                       />
                     </div>
-                  </footer>
+                  </footer> */}
                 </div>
                 <h2 className='text-lg text-center font-bold'>{food.nombre}</h2>
                 <p className='text-center text-gray-500'>{food.descripcion}</p>

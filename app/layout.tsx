@@ -6,6 +6,7 @@ import MobileSidebar from '@/components/shared/MobileSidebar'
 import MobileNavbar from '@/components/shared/MobileNavbar'
 import { FoodProvider } from '../hooks/FoodContext'
 import ToastProvider from '@/providers/toastProvider';
+import CartIcon from '@/components/CartIcon';
 
 export const metadata: Metadata = {
   title: 'Arrachera burger',
@@ -23,6 +24,7 @@ export default function RootLayout({
         <FoodProvider>
           <Sidebar />
           <MobileNavbar />
+          <CartIcon />
           <ToastProvider />
           {children}
           <MobileSidebar />
