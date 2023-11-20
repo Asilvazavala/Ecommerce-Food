@@ -126,7 +126,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
 
           {/* Total de la compra */}
           {onOpen && items.length > 0 && 
-          <div className="mx-auto mt-4">
+          <div className="mx-auto mt-4 w-full px-4">
             <p className="text-lg text-gray-500 text-center">Total:  
               <span className="text-Accent font-semibold text-lg">
                 {formatter.format(totalPrice)}
@@ -135,7 +135,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
             <button 
               onClick={handleBuyNow}
               className="mt-2 w-full px-4 hover:outline
-            hover:outline-Accent transition py-2 bg-Secondary dark:bg-DarkSecondary 
+            hover:outline-Accent transition py-3 bg-Secondary dark:bg-DarkSecondary 
               rounded-full text-lg">
               Comprar ahora
             </button>
