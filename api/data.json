@@ -6,7 +6,7 @@
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Hamburguesas",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 90
   },
   {
@@ -16,7 +16,7 @@
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Hamburguesas",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 110
   },
   {
@@ -26,7 +26,7 @@
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Hamburguesas",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 70
   },
   {
@@ -36,7 +36,7 @@
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Hamburguesas",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 80
   },
   {
@@ -46,7 +46,7 @@
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 600
   },
   {
@@ -56,7 +56,7 @@
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 500
   },
   {
@@ -66,7 +66,7 @@
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 400
   },
   {
@@ -76,7 +76,7 @@
     "descripcionLarga": "Bebida deliciosa que incluye los mejores ingredientes naturales para que disfutes cada momento.",
     "imagen": "https://images.pexels.com/photos/5538225/pexels-photo-5538225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Bebidas",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 50
   },
   {
@@ -86,7 +86,7 @@
     "descripcion": "Cerveza Tecate",
     "imagen": "https://images.pexels.com/photos/5538225/pexels-photo-5538225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Bebidas",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 60
   },
   {
@@ -96,7 +96,7 @@
     "descripcionLarga": "Alitas preaparadas con los mejores ingredientes, incluye 12 alitas con nuestra mejor salsa.",
     "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Snacks",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 70
   },
   {
@@ -106,7 +106,7 @@
     "descripcionLarga": "Alitas preaparadas con los mejores ingredientes, incluye 12 alitas con nuestra mejor salsa.",
     "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Snacks",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 100
   },
   {
@@ -116,7 +116,7 @@
     "descripcionLarga": "Hot dog preaparado con los mejores ingredientes, incluye tocino, cebolla, jitomate de gran calidad.",
     "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Snacks",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 70
   },
   {
@@ -126,7 +126,7 @@
     "descripcionLarga": "Combo preaparadas con los mejores ingredientes, incluye Costillas + papas gajo + aros de cebolla + alitas + boneless.",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 100
   },
   {
@@ -136,7 +136,7 @@
     "descripcionLarga": "Combo preaparadas con los mejores ingredientes, incluye Hamburgiesa + papas + boneless.",
     "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "categoria": "Paquetes",
-    "cantidad": 10,
+    "cantidad": 1,
     "precio": 170
   }
 ]

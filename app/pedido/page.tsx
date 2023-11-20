@@ -11,7 +11,7 @@ const Pedido = () => {
   const router = useRouter();
 
   return (
-    <section className='bg-Secondary dark:bg-DarkSecondary w-full h-screen px-4 md:pl-36 pt-20 md:pt-8'>
+    <section className='bg-Secondary dark:bg-DarkSecondary w-full h-screen px-4 md:pl-36 pt-16 md:pt-8'>
       <h1 className="text-3xl font-bold text-Accent text-center md:text-left">Tu carrito de compras</h1>
       <article className="md:mt-8 lg:grid lg:grid-cols-12 lg:items-start gap-x-8">
         <div className="lg:col-span-7">

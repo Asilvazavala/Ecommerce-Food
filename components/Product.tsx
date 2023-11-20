@@ -9,6 +9,7 @@ import { APIArracheraBurger } from '../types/types';
 import { MouseEventHandler } from "react";
 import useCart from "@/hooks/use-cart";
 import Footer from "./Footer";
+import Link from 'next/link';
 
 interface ProductPageProps {
   producto: APIArracheraBurger;
@@ -25,8 +26,16 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
+    cart.addItem(producto);
+  }
 
-    cart.addItem(producto)
+  const handleAddQuantity = () => {
+    cart.addQuantity(producto);
+  }
+
+  const handleRemoveQuantity = (quantity: number) => {
+    if (quantity < 2) return;
+    cart.removeQuantity(producto);
   }
 
   return (
@@ -49,9 +58,17 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
             <div className="flex gap-y-2 md:flex-row flex-col items-center justify-between w-full text-2xl my-2 md:my-6">
               <p>Cantidad</p>
               <aside className="flex">
-                <button className="dark:bg-DarkPrimary bg-Primary py-2 px-4 lg:hover:outline lg:hover:outline-Accent">-</button>
-                <div className="py-2 px-4 border-y-2 dark:border-DarkPrimary border-Primary">1</div>
-                <button className="dark:bg-DarkPrimary bg-Primary py-2 px-4 lg:hover:outline lg:hover:outline-Accent">+</button>
+                <button 
+                  onClick={() => handleRemoveQuantity(producto.cantidad)}
+                  className="dark:bg-DarkPrimary bg-Primary py-2 px-4 lg:hover:outline lg:hover:outline-Accent">
+                  -
+                </button>
+                <div className="py-2 px-4 border-y-2 dark:border-DarkPrimary border-Primary">{producto.cantidad}</div>
+                <button 
+                  onClick={handleAddQuantity}
+                  className="dark:bg-DarkPrimary bg-Primary py-2 px-4 lg:hover:outline lg:hover:outline-Accent">
+                  +
+                </button>
               </aside>
               <p className="text-Accent font-semibold my-2 md:my-4">
                 {formatter.format(producto.precio)}
@@ -74,7 +91,8 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
           <h2 className="text-3xl font-semibold mb-24 lg:mb-20">Puedes acompañar con</h2>
           <aside className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 items-start gap-x-8 gap-y-24 md:gap-y-20">
             {relatedProducts.map(relatedProduct => (
-              <div
+              <Link
+                href={`/producto/${relatedProduct.id}`}
                 className='bg-Primary dark:bg-DarkPrimary py-5 px-10 lg:py-6 min-h-full lg:px-12 rounded-xl flex 
                 flex-col items-center gap-2 shadow-md lg:hover:outline lg:hover:outline-Accent 
                 cursor-pointer group transition' 
@@ -89,7 +107,7 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
                 />
                 <p className="text-center font-bold">{relatedProduct.nombre}</p>
                 <span className="text-Accent text-lg font-semibold">{formatter.format(relatedProduct.precio)}</span>
-              </div>
+              </Link>
             ))}
           </aside>
         </article>

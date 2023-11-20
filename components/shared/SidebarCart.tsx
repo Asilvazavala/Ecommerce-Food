@@ -40,10 +40,19 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
     cart.removeItem(String(id))
   }
 
+  const handleAddQuantity = () => {
+    cart.addQuantity(producto);
+  }
+
+  const handleRemoveQuantity = (quantity: number) => {
+    if (quantity < 2) return;
+    cart.removeQuantity(producto);
+  }
+
   return (
     <>
       {onOpen && 
-      <section className="fixed top-0 right-0 w-full md:w-[300px] h-full bg-Primary dark:bg-DarkPrimary z-50">
+      <section className="fixed top-0 right-0 w-full md:w-[350px] h-full bg-Primary dark:bg-DarkPrimary z-50">
         <IconButton 
           onClick={() => onClose(!onOpen)}
           className="m-2" 
@@ -60,26 +69,39 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
             ? items.map((item) => (
               <article 
                 key={item.id}
-                className="flex items-start justify-start gap-2 border-b border-gray-500 p-2 relative"
+                className="flex items-start justify-start md:justify-between gap-2 border-b border-gray-500 py-2 px-4 relative"
               >
                 <Image 
+                  width={400}
+                  height={400}
                   src={item.imagen}
                   alt={item.nombre}
-                  width={100}
-                  height={100}
-                  className="w-[80px] h-[80px] rounded"
+                  className='object-cover object-center h-20 max-w-[80px] rounded'
                 />
                 
                 <div className="ml-2 mr-4">
-                  <h3>{item.nombre}</h3>
+                  <h3 className="font-semibold">{item.nombre}</h3>
                   <span className="text-Accent font-semibold">{formatter.format(item.precio)}</span>
                 </div>
 
-                <aside className="absolute right-3 top-3">
+                <aside className="relative w-full">
                   <FaRegTrashAlt  
                     onClick={() => onRemove(item.id)}
-                    className='cursor-pointer text-gray-500 hover:text-Accent h-5 w-5'
+                    className='cursor-pointer text-gray-500 hover:text-Accent h-4 w-4 absolute right-3 top-1'
                   />
+                  <div className="flex text-sm absolute right-3 top-12">
+                    <button 
+                      onClick={() => handleRemoveQuantity(item.cantidad)}
+                      className="dark:bg-DarkSecondary bg-Secondary py-1 px-3 lg:hover:outline lg:hover:outline-Accent">
+                      -
+                    </button>
+                    <div className="py-1 px-3 border-y-2 dark:border-DarkSecondary border-Secondary">{item.cantidad}</div>
+                    <button 
+                      onClick={handleAddQuantity}
+                      className="dark:bg-DarkSecondary bg-Secondary py-1 px-3 lg:hover:outline lg:hover:outline-Accent">
+                      +
+                    </button>
+                  </div>
                 </aside>
               </article>
             ))

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useFoods } from '../hooks/FoodContext';
+import { LuMoon, LuSun } from "react-icons/lu";
 
 const ToggleTheme = () => {
   const { isDarkMode, setIsDarkMode } = useFoods();
@@ -22,9 +23,16 @@ const ToggleTheme = () => {
     <div 
       onClick={toggleDarkMode} 
     >
-      <button className="px-4 py-2 rounded-full bg-Primary dark:bg-DarkPrimary
-       text-Accent cursor-pointer mt-4 hover:outline hover:outline-Accent shadow">
-        Cambiar Tema
+      <button 
+        className='flex items-center bg-Primary dark:bg-DarkPrimary 
+        rounded-full px-4 py-2 hover:outline hover:outline-Accent mt-4'>
+        { isDarkMode
+          ? <LuMoon className='h-4 w-4' />
+          : <LuSun className='h-4 w-4' />
+        }
+        <span className='ml-1 md:ml-2 text-sm'>
+          Cambiar Tema
+        </span>
       </button>
     </div>
   );

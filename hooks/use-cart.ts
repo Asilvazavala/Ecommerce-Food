@@ -9,6 +9,8 @@ interface CartStore {
   addItem: (data: APIArracheraBurger) => void;
   removeItem: (id: string) => void;
   removeAll: () => void;
+  addQuantity: (data: APIArracheraBurger) => void;
+  removeQuantity: (data: APIArracheraBurger) => void;
 }
 
 const useCart = create(
@@ -16,7 +18,7 @@ const useCart = create(
     items: [],
     addItem: (data: APIArracheraBurger) => {
       const currentItems = get().items;
-      const existingItem = currentItems.find((item) => item.id === Number(data.id))
+      const existingItem = currentItems.find((item) => item.id === Number(data.id));
 
       if (existingItem) {
         return toast("El producto ya está en el carrito");
@@ -32,6 +34,29 @@ const useCart = create(
     },
 
     removeAll: () => set({ items: [] }),
+
+    addQuantity: (data: APIArracheraBurger) => {
+      const currentItems = get().items;
+      const updatedItems = currentItems.map((item) =>
+        item.id === Number(data.id)
+          ? { ...item, cantidad: item.cantidad + 1 }
+          : item
+      );
+    
+      set({ items: updatedItems });
+    },
+
+    removeQuantity: (data: APIArracheraBurger) => {      
+      const currentItems = get().items;
+      const updatedItems = currentItems.map((item) =>
+        item.id === Number(data.id)
+          ? { ...item, cantidad: item.cantidad - 1 }
+          : item
+      );
+    
+      set({ items: updatedItems });
+    },
+    
   }), {
     name: 'cart-storage',
     storage: createJSONStorage(() => localStorage)

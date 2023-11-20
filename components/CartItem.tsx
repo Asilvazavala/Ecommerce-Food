@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import { X } from 'lucide-react';
+import { FaRegTrashAlt } from "react-icons/fa";
 
 import IconButton from '@/components/IconButton';
 import useCart from '@/hooks/use-cart';
@@ -34,9 +34,9 @@ const CartItem: React.FC<CartItemsProps> = ({
 
       <aside className='relative ml-4 flex flex-1 flex-col justify-between sm:ml-6'>
         <div className='absolute z-10 right-0 top-0'>
-          <IconButton 
+          <FaRegTrashAlt 
+            className='cursor-pointer text-gray-500 hover:text-Accent h-5 w-5'
             onClick={onRemove}
-            icon={<X size={15} />}
           />
         </div>
         
