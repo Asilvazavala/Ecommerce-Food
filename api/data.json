@@ -4,7 +4,7 @@
     "nombre": "Hamburguesa original",
     "descripcion": "Hamburguesa con jamón y queso",
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "/images/Cards/Hamburguesas/hamburguesa-sencilla.jpg",
+    "imagen": "/images/Cards/Hamburguesas/hamburguesa-sencilla.webp",
     "categoria": "Hamburguesas",
     "cantidad": 1,
     "precio": 90
@@ -34,7 +34,7 @@
     "nombre": "Hamburguesa cordon blue",
     "descripcion": "Hamburguesa con milanesa y jamón",
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "/images/Cards/Hamburguesas/hamburguesa-cordon-blue.jpg",
+    "imagen": "/images/Cards/Hamburguesas/hamburguesa-cordon-blue.webp",
     "categoria": "Hamburguesas",
     "cantidad": 1,
     "precio": 80
@@ -64,7 +64,7 @@
     "nombre": "Paquete 3",
     "descripcion": "medio de arrachera - medio de chistorra",
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "/images/Cards/Paquetes/paquete-3.jpeg",
+    "imagen": "/images/Cards/Paquetes/paquete-3.webp",
     "categoria": "Paquetes",
     "cantidad": 1,
     "precio": 400
@@ -104,7 +104,7 @@
     "nombre": "Alitas a la parrilla",
     "descripcion": "Alitas a la parrilla",
     "descripcionLarga": "Alitas preaparadas con los mejores ingredientes, incluye 12 alitas con nuestra mejor salsa.",
-    "imagen": "/images/Cards/Snacks/alitas-parrilla.jpg",
+    "imagen": "/images/Cards/Snacks/alitas-parrilla.webp",
     "categoria": "Snacks",
     "cantidad": 1,
     "precio": 100
@@ -114,7 +114,7 @@
     "nombre": "Hot dog",
     "descripcion": "Acompañado de tocino",
     "descripcionLarga": "Hot dog preaparado con los mejores ingredientes, incluye tocino, cebolla, jitomate de gran calidad.",
-    "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Snacks/hot-dog.webp",
     "categoria": "Snacks",
     "cantidad": 1,
     "precio": 70

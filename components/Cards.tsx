@@ -8,6 +8,7 @@ import { formatter } from '../lib/utils';
 
 import { APIArracheraBurger, Product } from '@/types/types';
 import useCart from '@/hooks/use-cart';
+
 interface ProductListProps {
   items: Product[];
 }

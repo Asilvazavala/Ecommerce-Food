@@ -55,7 +55,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
       className={`fixed top-0 right-0 w-full md:w-[350px] h-full bg-Primary
       dark:bg-DarkPrimary z-50 duration-500
       ${onOpen 
-      ? 'translate-x-0 bg' 
+      ? 'translate-x-0' 
       : 'translate-x-full'}`}>
         <IconButton 
           onClick={() => onClose(!onOpen)}
@@ -148,10 +148,10 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
         </main>
       </section>
       
-       {/* Fondo semitransparente */}
+      {/* Fondo semitransparente */}
       {onOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-60 z-40"
         />
       )}
     </div>

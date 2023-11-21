@@ -1,7 +1,6 @@
 "use client"
 
 import { useFoods } from '../hooks/FoodContext';
-import Search from './Search';
 
 const Filters: React.FC = () => {
   const { currentFilter, setCurrentFilter } = useFoods();
@@ -28,10 +27,6 @@ const Filters: React.FC = () => {
             </button>
           ))}
         </nav>
-
-        <article className="hidden sm:flex">
-          <Search />
-         </article>
       </div>
 
       <h2 id='cardsTitle' className="text-xl my-8 text-DarkPrimary dark:text-Primary text-center md:text-left">Elige tus {currentFilter === null ? 'comidas' : currentFilter}</h2>

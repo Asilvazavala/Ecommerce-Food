@@ -64,7 +64,7 @@ const Sections = () => {
       <section onClick={() => handleSection("Paquetes")}
       className="col-span-4 row-span-2 group dark:bg-DarkPrimary bg-Primary rounded flex justify-center items-center relative cursor-pointer">
       <Image 
-        src="/images/Secciones/paquetes-secciones.jpeg"
+        src="/images/Secciones/paquetes-secciones.webp"
         alt="Paquetes"
         title="Paquetes"
         width={100}
