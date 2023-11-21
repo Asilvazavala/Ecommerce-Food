@@ -82,7 +82,7 @@ const Carousel: React.FC<BillboardProps> = ({
   return (
     <section 
       ref={carouselRef}
-      className="relative group mb-2 max-w-[1400px] w-full"
+      className="relative group mb-2 max-w-[600px] w-full"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -94,9 +94,10 @@ const Carousel: React.FC<BillboardProps> = ({
           width={400}
           height={200}
           alt={slides[currentIndex].name}  
+          title={slides[currentIndex].name}  
           onMouseEnter={() => setChangeCarouselImage(false)}
           onMouseLeave={() => setChangeCarouselImage(true)}
-          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[450px] aspect-[1/1]'
+          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[450px] lg:max-w-[600px]'
         />  
       </Link>  
       <small 

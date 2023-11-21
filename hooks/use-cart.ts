@@ -30,7 +30,7 @@ const useCart = create(
 
     removeItem: (id: string) => {
       set({ items: [...get().items.filter((item) => item.id !== Number(id))] });
-      toast.success("Producto elminado del carrito.");
+      toast.success("Producto eliminado del carrito.");
     },
 
     removeAll: () => set({ items: [] }),

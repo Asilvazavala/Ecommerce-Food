@@ -50,16 +50,20 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
   }
 
   return (
-    <>
-      {onOpen && 
-      <section className="fixed top-0 right-0 w-full md:w-[350px] h-full bg-Primary dark:bg-DarkPrimary z-50">
+    <div>
+      <section 
+      className={`fixed top-0 right-0 w-full md:w-[350px] h-full bg-Primary
+      dark:bg-DarkPrimary z-50 duration-500
+      ${onOpen 
+      ? 'translate-x-0 bg' 
+      : 'translate-x-full'}`}>
         <IconButton 
           onClick={() => onClose(!onOpen)}
           className="m-2" 
           icon={<X size={17} />}
         />
         <main className="flex flex-col">
-          {onOpen && items.length > 0 && 
+          {items.length > 0 && 
           <h2 className="text-2xl text-center mb-2 text-gray-500">Tu carrito 
             <span className="text-Accent">({items.length})</span>
           </h2>}
@@ -125,7 +129,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
           }
 
           {/* Total de la compra */}
-          {onOpen && items.length > 0 && 
+          {items.length > 0 && 
           <div className="mx-auto mt-4 w-full px-4">
             <p className="text-lg text-gray-500 text-center">Total:  
               <span className="text-Accent font-semibold text-lg">
@@ -143,8 +147,14 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
           }
         </main>
       </section>
-      }
-    </>
+      
+       {/* Fondo semitransparente */}
+      {onOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+        />
+      )}
+    </div>
   )
 };
 

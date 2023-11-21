@@ -16,6 +16,12 @@ module.exports = {
       },
     },
     extend: {
+      transitionDuration: {
+        '3000': '3000ms',
+      },
+      scale: {
+        '175': '1.75',
+      },
       colors: {
         Primary: '#fff',
         Secondary: '#dedede',

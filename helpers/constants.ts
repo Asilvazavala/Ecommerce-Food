@@ -13,23 +13,19 @@ const year = currentDate.getFullYear();
 export const formatedDate = `${day} ${months[month]} del ${year}`;
 
 // Carrousel
-import Hamburguesas from '../public/images/hamburguesas.jpg';
-import Snacks from '../public/images/alitas.jpg';
-import Paquetes from '../public/images/paquetes.jpg';
-
 export const slides = [
   {
-    url: Hamburguesas,
+    url: '/images/Carrusel/hamburguesas.jpg',
     name:" Promo 1",
     categoria: 'Hamburguesas'
   },
   {
-    url: Paquetes,
+    url: '/images/Carrusel/paquetes.jpg',
     name:" Promo 2",
     categoria: 'Paquetes'
   },
   {
-    url: Snacks,
+    url: '/images/Carrusel/alitas.jpg',
     name:" Promo 3",
     categoria: 'Snacks'
   },

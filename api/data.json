@@ -4,7 +4,7 @@
     "nombre": "Hamburguesa original",
     "descripcion": "Hamburguesa con jamón y queso",
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Hamburguesas/hamburguesa-sencilla.jpg",
     "categoria": "Hamburguesas",
     "cantidad": 1,
     "precio": 90
@@ -14,7 +14,7 @@
     "nombre": "Hamburguesa bigotona",
     "descripcion": "Hamburguesa con tocino y chiles jalapeños",
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Hamburguesas/hamburguesa-bigotona.jpeg",
     "categoria": "Hamburguesas",
     "cantidad": 1,
     "precio": 110
@@ -24,7 +24,7 @@
     "nombre": "Chesse burger",
     "descripcion": "Hamburguesa con doble queso",
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Hamburguesas/chesse-burger.jpg",
     "categoria": "Hamburguesas",
     "cantidad": 1,
     "precio": 70
@@ -34,7 +34,7 @@
     "nombre": "Hamburguesa cordon blue",
     "descripcion": "Hamburguesa con milanesa y jamón",
     "descripcionLarga": "Deliciosa hamburguesa con triple carne, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Hamburguesas/hamburguesa-cordon-blue.jpg",
     "categoria": "Hamburguesas",
     "cantidad": 1,
     "precio": 80
@@ -44,7 +44,7 @@
     "nombre": "Paquete 1",
     "descripcion": "1kg de arrachera - Medio de costilla - Medio de chistorra",
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Paquetes/paquete-1.webp",
     "categoria": "Paquetes",
     "cantidad": 1,
     "precio": 600
@@ -54,7 +54,7 @@
     "nombre": "Paquete 2",
     "descripcion": "1kg de arrachera - 2 piezas de chorizo",
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Paquetes/paquete-2.webp",
     "categoria": "Paquetes",
     "cantidad": 1,
     "precio": 500
@@ -64,7 +64,7 @@
     "nombre": "Paquete 3",
     "descripcion": "medio de arrachera - medio de chistorra",
     "descripcionLarga": "Paquete delicioso que incluye 1kg de arrachera - Medio de costilla - Medio de chistorra, aros de cebolla, Cebolla crujiente, queso suizo, salsa de queso chipotle, salsa stacker (Mayonesa con pepinillos) y tocino crujiente.",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Paquetes/paquete-3.jpeg",
     "categoria": "Paquetes",
     "cantidad": 1,
     "precio": 400
@@ -74,7 +74,7 @@
     "nombre": "Limonada",
     "descripcion": "Hecha con ingredientes naturales",
     "descripcionLarga": "Bebida deliciosa que incluye los mejores ingredientes naturales para que disfutes cada momento.",
-    "imagen": "https://images.pexels.com/photos/5538225/pexels-photo-5538225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Bebidas/Limonada.jpg",
     "categoria": "Bebidas",
     "cantidad": 1,
     "precio": 50
@@ -84,7 +84,7 @@
     "nombre": "Cerveza",
     "descripcionLarga": "Bebida deliciosa que incluye los mejores ingredientes naturales para que disfutes cada momento.",
     "descripcion": "Cerveza Tecate",
-    "imagen": "https://images.pexels.com/photos/5538225/pexels-photo-5538225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Bebidas/cerveza.jpg",
     "categoria": "Bebidas",
     "cantidad": 1,
     "precio": 60
@@ -94,7 +94,7 @@
     "nombre": "Alitas BBQ",
     "descripcion": "Alitas con nuestra mejor salsa",
     "descripcionLarga": "Alitas preaparadas con los mejores ingredientes, incluye 12 alitas con nuestra mejor salsa.",
-    "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Snacks/alitas-bbq.jpg",
     "categoria": "Snacks",
     "cantidad": 1,
     "precio": 70
@@ -104,7 +104,7 @@
     "nombre": "Alitas a la parrilla",
     "descripcion": "Alitas a la parrilla",
     "descripcionLarga": "Alitas preaparadas con los mejores ingredientes, incluye 12 alitas con nuestra mejor salsa.",
-    "imagen": "https://images.pexels.com/photos/4676409/pexels-photo-4676409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Snacks/alitas-parrilla.jpg",
     "categoria": "Snacks",
     "cantidad": 1,
     "precio": 100
@@ -124,7 +124,7 @@
     "nombre": "Combo Friends",
     "descripcion": "Costillas + papas gajo + aros de cebolla + alitas + boneless",
     "descripcionLarga": "Combo preaparadas con los mejores ingredientes, incluye Costillas + papas gajo + aros de cebolla + alitas + boneless.",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Paquetes/combo-friends.jpg",
     "categoria": "Paquetes",
     "cantidad": 1,
     "precio": 100
@@ -134,7 +134,7 @@
     "nombre": "Combo Monster",
     "descripcion": "Hamburgiesa + papas + boneless",
     "descripcionLarga": "Combo preaparadas con los mejores ingredientes, incluye Hamburgiesa + papas + boneless.",
-    "imagen": "https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "imagen": "/images/Cards/Paquetes/combo-monster.jpg",
     "categoria": "Paquetes",
     "cantidad": 1,
     "precio": 170

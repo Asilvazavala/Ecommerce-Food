@@ -37,7 +37,7 @@ type FoodProviderProps = {
 
 export function FoodProvider({ children }: FoodProviderProps) {
   const [currentFoodData, setCurrentFoodData] = useState<APIArracheraBurger[]>([]);
-  const [currentFilter, setCurrentFilter] = useState<string | null>(null);
+  const [currentFilter, setCurrentFilter] = useState<string | null>('Hamburguesas');
   const [search, setSearch] = useState<string>("");
   const [detailsFood, setDetailsFood] = useState<APIArracheraBurger | undefined>();
   const [isDarkMode, setIsDarkMode] = useState(true);
