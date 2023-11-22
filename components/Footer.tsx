@@ -5,8 +5,8 @@ import { BsFacebook, BsWhatsapp, BsInstagram } from "react-icons/bs";
 
 const Footer: React.FC = () => {
   return (
-    <section className='bg-Primary dark:bg-DarkPrimary w-full px-4 py-10 flex flex-col
-    gap-10 justify-center items-center flex-wrap absolute bottom-0 md:justify-between md:ml-28 
+    <section className='bg-Primary dark:bg-DarkPrimary w-full mt-20 px-4 py-10 flex flex-col
+    gap-10 justify-center items-center flex-wrap md:justify-between md:ml-28 
     md:pr-40 md:items-center md:flex-row'>
       <article className='flex flex-col gap-4'>
         <picture className='flex items-center justify-center'>

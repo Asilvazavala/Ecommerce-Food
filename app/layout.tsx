@@ -21,15 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`dark h-full ${montserrat.className}`}>
+      <body className={`dark ${montserrat.className}`}>
         <FoodProvider>
           <Sidebar />
           <MobileNavbar />
           <CartIcon />
           <ToastProvider />
           {children}
-          <MobileSidebar />
           <Footer />
+          <MobileSidebar />
         </FoodProvider>
       </body>
     </html>
