@@ -8,8 +8,8 @@ import { FaCartPlus } from "react-icons/fa";
 import { APIArracheraBurger } from '../types/types';
 import { MouseEventHandler } from "react";
 import useCart from "@/hooks/use-cart";
-import Footer from "./Footer";
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface ProductPageProps {
   producto: APIArracheraBurger;
@@ -24,18 +24,20 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
   const { producto, relatedProducts } = props;
   const cart = useCart();
 
+  const [quantity, setQuantity] = useState(1);
+
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
-    cart.addItem(producto);
+    cart.addItem({ ...producto, cantidad: quantity });
   }
 
-  const handleAddQuantity = () => {
-    cart.addQuantity(producto);
+  const handleAddQuantity = (quantity: number) => {
+    setQuantity(quantity + 1);
   }
-
+  
   const handleRemoveQuantity = (quantity: number) => {
     if (quantity < 2) return;
-    cart.removeQuantity(producto);
+    setQuantity(quantity - 1);
   }
 
   return (
@@ -59,13 +61,13 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
               <p>Cantidad</p>
               <aside className="flex">
                 <button 
-                  onClick={() => handleRemoveQuantity(producto.cantidad)}
+                  onClick={() => handleRemoveQuantity(quantity)}
                   className="dark:bg-DarkPrimary bg-Primary py-2 px-4 lg:hover:outline lg:hover:outline-Accent">
                   -
                 </button>
-                <div className="py-2 px-4 border-y-2 dark:border-DarkPrimary border-Primary">{producto.cantidad}</div>
+                <div className="py-2 px-4 border-y-2 dark:border-DarkPrimary border-Primary">{quantity}</div>
                 <button 
-                  onClick={handleAddQuantity}
+                  onClick={() => handleAddQuantity(quantity)}
                   className="dark:bg-DarkPrimary bg-Primary py-2 px-4 lg:hover:outline lg:hover:outline-Accent">
                   +
                 </button>
@@ -112,7 +114,6 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
           </aside>
         </article>
       </main>
-      <Footer />
     </section>
   )
 };

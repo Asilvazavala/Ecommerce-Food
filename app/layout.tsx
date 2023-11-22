@@ -7,6 +7,7 @@ import MobileNavbar from '@/components/shared/MobileNavbar'
 import { FoodProvider } from '../hooks/FoodContext'
 import ToastProvider from '@/providers/toastProvider';
 import CartIcon from '@/components/CartIcon';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Arrachera burger',
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`dark antialiased ${montserrat.className}`}>
+      <body className={`dark h-full ${montserrat.className}`}>
         <FoodProvider>
           <Sidebar />
           <MobileNavbar />
@@ -28,6 +29,7 @@ export default function RootLayout({
           <ToastProvider />
           {children}
           <MobileSidebar />
+          <Footer />
         </FoodProvider>
       </body>
     </html>

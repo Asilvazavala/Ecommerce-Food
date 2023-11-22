@@ -5,14 +5,14 @@ const Perfil: React.FC = () => {
     <section className='bg-Secondary dark:bg-DarkSecondary w-full h-screen px-4 
     flex items-center flex-col md:pl-36 pt-16 md:pt-6 md:items-start'>
       <h1 className="text-3xl text-Accent font-bold mb-4">Perfil</h1>
-      <form className="flex flex-col gap-4 w-full md:w-96 pb-4 border-b border-gray-500">
+      <form className="flex flex-col gap-4 w-full md:w-[30rem] pb-4 border-b border-gray-500">
         <article className="flex justify-between items-center gap-2">
           <label htmlFor="nombre">Nombre(s)</label>
           <input 
             id="nombre" 
             type="text" 
             placeholder="Requerido"
-            className="p-2 rounded-sm md:w-60"
+            className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
 
@@ -22,7 +22,7 @@ const Perfil: React.FC = () => {
             id="apellido" 
             type="text" 
             placeholder="Requerido"
-            className="p-2 rounded-sm md:w-60"
+            className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
         <article className="flex justify-between items-center gap-2">
@@ -31,7 +31,7 @@ const Perfil: React.FC = () => {
             id="email" 
             type="email" 
             placeholder="Requerido"
-            className="p-2 rounded-sm md:w-60"
+            className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
 
@@ -41,7 +41,7 @@ const Perfil: React.FC = () => {
             id="confirmEmail" 
             type="email" 
             placeholder="Requerido"
-            className="p-2 rounded-sm md:w-60"
+            className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
 
@@ -51,7 +51,7 @@ const Perfil: React.FC = () => {
             id="phone" 
             type="tel" 
             placeholder="Requerido"
-            className="p-2 rounded-sm md:w-60"
+            className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
         <button 

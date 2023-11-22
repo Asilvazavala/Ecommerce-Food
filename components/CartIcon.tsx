@@ -8,7 +8,11 @@ import SidebarCart from './shared/SidebarCart';
 const CartIcon: React.FC = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
-  const cart = useCart();
+  const items = useCart((state) => state.items);
+
+  const totalQuantity = items.reduce((total, item) => {
+    return total + Number(item.cantidad)
+  }, 0);
 
   return (
     <section className='relative'>
@@ -22,7 +26,7 @@ const CartIcon: React.FC = () => {
           className='text-Accent font-bold'
         />
         <span className='ml-1 md:ml-2 text-sm text-Accent font-bold'>
-          {cart.items.length}
+          {totalQuantity}
         </span>
       </button>
       <SidebarCart 

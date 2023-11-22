@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { FaRegTrashAlt } from "react-icons/fa";
 
-import IconButton from '@/components/IconButton';
 import useCart from '@/hooks/use-cart';
 import { APIArracheraBurger } from '@/types/types';
 import { formatter } from '../lib/utils';
@@ -21,9 +20,18 @@ const CartItem: React.FC<CartItemsProps> = ({
     cart.removeItem(String(data.id))
   }
 
+  const handleAddQuantity = (producto: APIArracheraBurger) => {
+    cart.addQuantity(producto);
+  }
+  
+  const handleRemoveQuantity = (quantity: number, producto: APIArracheraBurger) => {
+    if (quantity < 2) return;
+    cart.removeQuantity(producto);
+  }
+
   return (
-    <li className='flex py-6 border-b border-gray-500'>
-      <figure className='relative h-24 w-24 rounded-md overflow-hidden sm:h-32 sm:w-32'>
+    <li className='flex py-4 border-b border-gray-500'>
+      <figure className='relative h-16 w-20 rounded-md overflow-hidden sm:h-24 sm:w-28'>
         <Image 
           fill
           src={data.imagen}
@@ -47,9 +55,19 @@ const CartItem: React.FC<CartItemsProps> = ({
             </p>
           </div>
 
-          <div className='mt-1 flex text-sm mb-2'>
-            <p className='text-gray-500 md:mr-10'>{data.descripcion}</p>
-          </div>
+          <aside className="flex h-fit my-2 md:my-0">
+            <button 
+              onClick={() => handleRemoveQuantity(data.cantidad, data)}
+              className="dark:bg-DarkPrimary bg-Primary py-1 px-3 md:py-2 md:px-4 lg:hover:outline lg:hover:outline-Accent">
+              -
+            </button>
+            <div className="py-1 px-3 md:py-2 md:px-4 border-y-2 dark:border-DarkPrimary border-Primary">{data.cantidad}</div>
+            <button 
+              onClick={() => handleAddQuantity(data)}
+              className="dark:bg-DarkPrimary bg-Primary py-1 px-3 md:py-2 md:px-4 lg:hover:outline lg:hover:outline-Accent">
+              +
+            </button>
+          </aside>
 
           <span className='text-Accent font-semibold text-lg mt-2'>
             {formatter.format(data.precio)}

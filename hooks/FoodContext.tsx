@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { APIArracheraBurger } from '../types/types';
@@ -12,6 +12,8 @@ type FoodContextType = {
   setCurrentFilter: React.Dispatch<React.SetStateAction<string | null>>;
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+  searchResults: APIArracheraBurger[];
+  setSearchResults: React.Dispatch<React.SetStateAction<APIArracheraBurger[]>>;
   detailsFood: APIArracheraBurger | undefined;
   setDetailsFood: React.Dispatch<React.SetStateAction<APIArracheraBurger | undefined>>;
   isDarkMode: boolean;
@@ -39,20 +41,22 @@ export function FoodProvider({ children }: FoodProviderProps) {
   const [currentFoodData, setCurrentFoodData] = useState<APIArracheraBurger[]>([]);
   const [currentFilter, setCurrentFilter] = useState<string | null>('Hamburguesas');
   const [search, setSearch] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<APIArracheraBurger[]>([]);
   const [detailsFood, setDetailsFood] = useState<APIArracheraBurger | undefined>();
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const data: APIArracheraBurger[] = db as APIArracheraBurger[];
 
   useEffect(() => {
-    const filtered = currentFilter === null
+    const onFilter = data.filter((food) =>food.categoria === currentFilter);
+
+    const onSearch = search !== ''
       ? data.filter((food) => food.nombre.toLowerCase().includes(search.toLowerCase()))
-      : data.filter((food) =>
-          food.categoria === currentFilter &&
-          food.nombre.toLowerCase().includes(search.toLowerCase())
-        );
-  
-        setCurrentFoodData(filtered);
+      : []
+
+    setCurrentFoodData(onFilter);
+    setSearchResults(onSearch);
+    
   }, [currentFilter, search, data]);
 
   const value: FoodContextType = {
@@ -62,6 +66,8 @@ export function FoodProvider({ children }: FoodProviderProps) {
     setCurrentFilter,
     search,
     setSearch,
+    searchResults,
+    setSearchResults,
     detailsFood,
     setDetailsFood,
     isDarkMode,

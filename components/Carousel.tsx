@@ -93,6 +93,7 @@ const Carousel: React.FC<BillboardProps> = ({
           src={slides[currentIndex].url}
           width={400}
           height={200}
+          priority
           alt={slides[currentIndex].name}  
           title={slides[currentIndex].name}  
           onMouseEnter={() => setChangeCarouselImage(false)}
