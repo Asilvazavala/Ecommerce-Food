@@ -1,11 +1,9 @@
-
 "use client"
 
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Map } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MarkerHouse } from './MarkerHouse';
-
 
 export function Location() {
   const coordinatePoint = {
