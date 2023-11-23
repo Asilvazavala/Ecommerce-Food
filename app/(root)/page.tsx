@@ -8,13 +8,14 @@ import Header from "@/components/Header";
 
 export default async function Home() {
   // const products = await getProducts({ isFeatured: true });
-  const billboards = await getBillboard("77dd4a15-630b-483c-a86c-73603dddde9a");
+  // const billboards = await getBillboard("77dd4a15-630b-483c-a86c-73603dddde9a");
 
   return (
     <section className='bg-Secondary dark:bg-DarkSecondary w-full md:pl-28 '>
       <main className='px-4 md:px-8 max-w-[1400px]'>
         <Header />
-        <Carousel data={billboards} />
+        {/* <Carousel data={billboards} /> */}
+        <Carousel />
         <Filters />
         {/* <Cards items={products} /> */}
         <Cards />

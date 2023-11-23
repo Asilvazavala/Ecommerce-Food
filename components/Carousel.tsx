@@ -8,14 +8,15 @@ import { useState, useRef, useEffect  } from 'react';
 import Link from 'next/link';
 import { useFoods } from '../hooks/FoodContext';
 
-import { Billboard as BillboardType } from '@/types/types';
-interface BillboardProps {
-  data: BillboardType
-};
+// import { Billboard as BillboardType } from '@/types/types';
+// interface BillboardProps {
+//   data: BillboardType
+// };
 
-const Carousel: React.FC<BillboardProps> = ({
-  data
-}) => {
+// const Carousel: React.FC<BillboardProps> = ({
+//   data
+
+const Carousel = () => {
   const { setCurrentFilter } = useFoods();
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
