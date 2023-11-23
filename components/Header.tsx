@@ -1,7 +1,6 @@
 "use client";
 
 import { formatedDate } from '../helpers/constants';
-import Search from './Search';
 
 const Header: React.FC = () => {
 
@@ -14,9 +13,6 @@ const Header: React.FC = () => {
             <p className="text-gray-500">{formatedDate}</p>
           </article>
           
-          <article className='hidden md:flex ml-auto items-center gap-x-4'>
-            <Search />
-          </article>
         </header>
       </main>
     </section>

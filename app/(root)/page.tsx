@@ -5,7 +5,6 @@ import Cards from "@/components/Cards";
 import Carousel from "@/components/Carousel";
 import Filters from "@/components/Filters";
 import Header from "@/components/Header";
-import Sections from "@/components/Sections";
 
 export default async function Home() {
   // const products = await getProducts({ isFeatured: true });
@@ -15,10 +14,7 @@ export default async function Home() {
     <section className='bg-Secondary dark:bg-DarkSecondary w-full md:pl-28 '>
       <main className='px-4 md:px-8 max-w-[1400px]'>
         <Header />
-        <div className="flex gap-x-8">
-          <Carousel data={billboards} />
-          <Sections />
-        </div>
+        <Carousel data={billboards} />
         <Filters />
         {/* <Cards items={products} /> */}
         <Cards />

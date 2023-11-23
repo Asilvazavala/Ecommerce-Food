@@ -30,48 +30,41 @@ const CartItem: React.FC<CartItemsProps> = ({
   }
 
   return (
-    <li className='flex py-4 border-b border-gray-500'>
-      <figure className='relative h-16 w-20 rounded-md overflow-hidden sm:h-24 sm:w-28'>
-        <Image 
-          fill
-          src={data.imagen}
-          alt={data.nombre}
-          className='object-cover object-center'
+    <li 
+      key={data.id}
+      className="flex items-start justify-start md:justify-between gap-2 border-b
+       border-gray-500 py-4 relative"
+    >
+      <Image 
+        width={400}
+        height={400}
+        src={data.imagen}
+        alt={data.nombre}
+        className='object-cover object-center h-20 max-w-[90px] rounded'
+      />
+      
+      <div className="ml-2 mr-4">
+        <h3 className="font-semibold">{data.nombre}</h3>
+        <span className="text-Accent font-semibold">{formatter.format(data.precio)}</span>
+      </div>
+
+      <aside className="relative w-full">
+        <FaRegTrashAlt  
+          onClick={() => onRemove()}
+          className='cursor-pointer text-gray-500 hover:text-Accent h-4 w-4 absolute right-3 top-1'
         />
-      </figure>
-
-      <aside className='relative ml-4 flex flex-1 flex-col justify-between sm:ml-6'>
-        <div className='absolute z-10 right-0 top-0'>
-          <FaRegTrashAlt 
-            className='cursor-pointer text-gray-500 hover:text-Accent h-5 w-5'
-            onClick={onRemove}
-          />
-        </div>
-        
-        <div className='relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0'>
-          <div className='flex justify-between'>
-            <p className='text-xl font-semibold'>
-              {data.nombre}
-            </p>
-          </div>
-
-          <aside className="flex h-fit my-2 md:my-0">
-            <button 
-              onClick={() => handleRemoveQuantity(data.cantidad, data)}
-              className="dark:bg-DarkPrimary bg-Primary py-1 px-3 md:py-2 md:px-4 lg:hover:outline lg:hover:outline-Accent">
-              -
-            </button>
-            <div className="py-1 px-3 md:py-2 md:px-4 border-y-2 dark:border-DarkPrimary border-Primary">{data.cantidad}</div>
-            <button 
-              onClick={() => handleAddQuantity(data)}
-              className="dark:bg-DarkPrimary bg-Primary py-1 px-3 md:py-2 md:px-4 lg:hover:outline lg:hover:outline-Accent">
-              +
-            </button>
-          </aside>
-
-          <span className='text-Accent font-semibold text-lg mt-2'>
-            {formatter.format(data.precio)}
-          </span>
+        <div className="flex text-sm absolute right-3 top-12">
+          <button 
+            onClick={() => handleRemoveQuantity(data.cantidad, data)}
+            className="dark:bg-DarkPrimary bg-Primary py-1 px-3 lg:hover:outline lg:hover:outline-Accent">
+            -
+          </button>
+          <div className="py-1 px-3 border-y-2 dark:border-DarkPrimary border-Primary">{data.cantidad}</div>
+          <button 
+            onClick={() => handleAddQuantity(data)}
+            className="dark:bg-DarkPrimary bg-Primary py-1 px-3 lg:hover:outline lg:hover:outline-Accent">
+            +
+          </button>
         </div>
       </aside>
     </li>

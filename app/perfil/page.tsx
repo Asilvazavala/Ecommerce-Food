@@ -2,10 +2,12 @@ import ToggleTheme from "@/helpers/ToggleTheme";
 
 const Perfil: React.FC = () => {
   return (
-    <section className='bg-Secondary dark:bg-DarkSecondary w-full h-screen px-4 
+    <section className='bg-Secondary dark:bg-DarkSecondary w-full px-4 
     flex items-center flex-col md:pl-36 pt-16 md:pt-6 md:items-start'>
-      <h1 className="text-3xl text-Accent font-bold mb-4">Perfil</h1>
-      <form className="flex flex-col gap-4 w-full md:w-[30rem] pb-4 border-b border-gray-500">
+      <h1 className="text-3xl text-Accent font-bold mb-6">Perfil</h1>
+      <h2 className="border-b border-gray-500 text-gray-500 text-xl w-full md:w-[30rem] mb-4">Datos</h2>
+
+      <form className="flex flex-col gap-4 w-full md:w-[30rem] pb-4">
         <article className="flex justify-between items-center gap-2">
           <label htmlFor="nombre">Nombre(s)</label>
           <input 
@@ -61,6 +63,7 @@ const Perfil: React.FC = () => {
           Guardar cambios
         </button>
       </form>
+      <h2 className="border-b border-gray-500 text-gray-500 text-xl w-full md:w-[30rem] mt-4">Configuración</h2>
       <ToggleTheme />
     </section>
   )

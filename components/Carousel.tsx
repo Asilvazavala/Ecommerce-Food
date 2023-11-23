@@ -43,6 +43,8 @@ const Carousel: React.FC<BillboardProps> = ({
 
   const startCarousel = () => {
     if (changeCarouselImage) {
+      setChangeCarouselImage(false); 
+
       nextSlide();
     }
   };
@@ -53,6 +55,7 @@ const Carousel: React.FC<BillboardProps> = ({
     return () => {
       clearInterval(intervalId); 
     };
+
   }, [currentIndex, changeCarouselImage]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -82,12 +85,13 @@ const Carousel: React.FC<BillboardProps> = ({
   return (
     <section 
       ref={carouselRef}
-      className="relative group mb-2 max-w-[600px] w-full"
+      className={`relative group mb-2 max-w-[1400px] w-full overflow-hidden 
+      duration-300 transition-all translate-x-0 scroll-smooth`}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <Link href={"#cardsTitle"}>
+      <Link href={"#cardsTitle"} className='overflow-hidden'>
         <Image
           onClick={() => setCurrentFilter(slides[currentIndex].categoria)}
           src={slides[currentIndex].url}
@@ -98,7 +102,7 @@ const Carousel: React.FC<BillboardProps> = ({
           title={slides[currentIndex].name}  
           onMouseEnter={() => setChangeCarouselImage(false)}
           onMouseLeave={() => setChangeCarouselImage(true)}
-          className='rounded-lg duration-500 w-full max-h-[250px] md:max-h-[450px] lg:max-w-[600px]'
+          className='rounded-lg w-full max-h-[250px] md:max-h-[450px] lg:max-w-[1400px]'
         />  
       </Link>  
       <small 

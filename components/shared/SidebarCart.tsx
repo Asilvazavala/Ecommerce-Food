@@ -73,7 +73,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
       className={`fixed top-0 right-0 w-full md:w-[350px] h-full bg-Primary
       dark:bg-DarkPrimary z-50 duration-500
       ${onOpen 
-      ? 'translate-x-0 overflow-scroll overflow-x-hidden' 
+      ? 'translate-x-0 overflow-x-hidden' 
       : 'translate-x-full'}`}>
         <div className="flex justify-between items-center px-4 mt-4 border-b border-gray-500">
           <h2 className="text-2xl text-center mb-2 text-gray-500">Tu carrito 
@@ -86,7 +86,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
             icon={<X size={17} />}
           />
         </div>
-        <main className="flex flex-col max-h-[50vh] overflow-y-scroll overflow-x-hidden">
+        <main className="flex flex-col max-h-[50vh] overflow-x-hidden">
           {/* Productos en el carrito */}
           {items.length > 0
             ? items.map((item) => (

@@ -20,7 +20,7 @@ const CartIconMobile: React.FC = () => {
         onClick={() => setOpenSidebar(!openSidebar)}
         className='flex items-center bg-Primary dark:bg-DarkPrimary z-10 md:hidden'>
         <ShoppingBag
-          size={20}
+          size={25}
           className='text-Accent font-bold'
         />
         <span className='ml-1 md:ml-2 text-sm text-Accent font-bold'>

@@ -8,6 +8,7 @@ import { FoodProvider } from '../hooks/FoodContext'
 import ToastProvider from '@/providers/toastProvider';
 import CartIcon from '@/components/CartIcon';
 import Footer from '@/components/Footer';
+import Search from '@/components/Search';
 
 export const metadata: Metadata = {
   title: 'Arrachera burger',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <FoodProvider>
           <Sidebar />
           <MobileNavbar />
+          <Search />
           <CartIcon />
           <ToastProvider />
           {children}

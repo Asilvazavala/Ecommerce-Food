@@ -34,10 +34,10 @@ const Search: React.FC = () => {
     <section className="text-DarkPrimary w-full relative">
       <button className="flex items-center bg-Primary dark:bg-DarkPrimary 
         rounded-full px-4 py-2 lg:hover:outline lg:hover:outline-Accent
-        fixed top-[0.4rem] right-14 md:right-28 md:top-8 z-10">
+        md:fixed top-[0.4rem] right-14 md:right-28 md:top-8 z-10">
         <BsSearch 
           onClick={() => setOpenSearchBar(!openSearchBar)} 
-          className="text-Accent h-5 w-5 font-bold" 
+          className="text-Accent h-6 w-6 lg:h-5 lg:w-5 font-bold" 
         />
       </button>
 

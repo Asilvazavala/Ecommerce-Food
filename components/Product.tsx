@@ -54,7 +54,7 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
           />
           <header className="mt-4 sm:mt-8 lg:mt-0 flex items-start flex-col gap-y-2">
             {/* Info */}
-            <h2 className="text-3xl font-semibold">{producto.nombre}</h2>
+            <h2 className="text-3xl font-semibold lg:max-w-[80%]">{producto.nombre}</h2>
             <p className="text-gray-500 text-lg md:mt-10">{producto.descripcionLarga}</p>
             
             <div className="flex gap-y-2 md:flex-row flex-col items-center justify-between w-full text-2xl my-2 md:my-6">

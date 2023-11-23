@@ -1,10 +1,10 @@
-import MapDeliver from "@/components/MapDeliver";
+import { Location } from "@/components/Location";
 
 const Entrega: React.FC = () => {
   return (
-    <section className='bg-Secondary dark:bg-DarkSecondary w-full h-screen px-4 lg:pl-36 pt-16 md:pt-8'>
+    <section className='bg-Secondary dark:bg-DarkSecondary w-full px-4 md:pl-36 pt-16 md:pt-8'>
       <h1 className="text-3xl text-Accent font-bold mb-4">Entrega</h1>
-      <MapDeliver />
+      <Location />
     </section>
   )
 };

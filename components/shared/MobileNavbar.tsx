@@ -47,8 +47,11 @@ const MobileNavbar: React.FC = () => {
             />
           </Link>
         </picture>
-        <Search />
-        <CartIconMobile />
+        
+        <div className='flex justify-center items-center gap-x-2'>
+          <Search />
+          <CartIconMobile />
+        </div>
       </main>
     </section>
   )

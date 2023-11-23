@@ -25,7 +25,7 @@ const Sections = () => {
           title="Hamburguesas"
           width={100}
           height={100}
-          className="w-[9.4rem] h-[10.6rem] object-cover rounded group-hover:scale-175 transition duration-3000"
+          className="w-full h-full object-cover rounded group-hover:brightness-50 transition-all"
         />
         <h3 className="absolute bottom-7 font-semibold text-xl tracking-wider">HAMBURGUESAS</h3>
       </section>
@@ -35,12 +35,12 @@ const Sections = () => {
         onClick={() => handleSection("Bebidas")}
         className="col-span-2 row-span-2 group dark:bg-DarkPrimary bg-Primary rounded flex justify-center items-center relative cursor-pointer">
         <Image 
-          src="/images/Secciones/bebidas-secciones.jpg"
+          src="/images/Secciones/bebidas-secciones.webp"
           alt="Bebidas"
           title="Bebidas"
           width={100}
           height={100}
-          className="w-[9.2rem] h-[5rem] object-cover rounded group-hover:scale-175 transition duration-3000"
+          className="w-full h-full object-cover rounded group-hover:brightness-50 transition-all"
         />
         <h3 className="absolute bottom-7 font-semibold text-xl tracking-wider">BEBIDAS</h3>
       </section>
@@ -55,7 +55,7 @@ const Sections = () => {
         title="Snacks"
         width={100}
         height={100}
-        className="w-[9.2rem] h-[5rem] object-cover rounded group-hover:scale-175 transition duration-3000"
+        className="w-full h-full object-cover rounded group-hover:brightness-50 transition-all"
       />
       <h3 className="absolute bottom-7 font-semibold text-xl tracking-wider">SNACKS</h3>
       </section>
@@ -69,7 +69,7 @@ const Sections = () => {
         title="Paquetes"
         width={100}
         height={100}
-        className="w-[18.8rem] h-[5rem] object-cover rounded group-hover:scale-175 transition duration-3000"
+        className="w-full h-full object-cover rounded group-hover:brightness-50 transition-all" 
       />
       <h3 className="absolute bottom-7 font-semibold text-xl tracking-wider">PAQUETES</h3>
       </section>
