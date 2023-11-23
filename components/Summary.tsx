@@ -4,8 +4,8 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import { formatter } from '../lib/utils';
 
+import { formatter } from '../lib/utils';
 import useCart from '@/hooks/use-cart';
 
 const Summary = () => {

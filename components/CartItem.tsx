@@ -43,17 +43,17 @@ const CartItem: React.FC<CartItemsProps> = ({
         className='object-cover object-center h-20 max-w-[90px] rounded'
       />
       
-      <div className="ml-2 mr-4">
+      <div className="ml-2 mr-4 w-full">
         <h3 className="font-semibold">{data.nombre}</h3>
         <span className="text-Accent font-semibold">{formatter.format(data.precio)}</span>
       </div>
 
-      <aside className="relative w-full">
+      <aside className="relative w-full max-w-[80%]">
         <FaRegTrashAlt  
           onClick={() => onRemove()}
-          className='cursor-pointer text-gray-500 hover:text-Accent h-4 w-4 absolute right-3 top-1'
+          className='cursor-pointer text-gray-500 hover:text-Accent h-4 w-4 absolute right-0 top-1'
         />
-        <div className="flex text-sm absolute right-3 top-12">
+        <div className="flex text-sm absolute right-0 top-12">
           <button 
             onClick={() => handleRemoveQuantity(data.cantidad, data)}
             className="dark:bg-DarkPrimary bg-Primary py-1 px-3 lg:hover:outline lg:hover:outline-Accent">
