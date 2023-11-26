@@ -21,8 +21,7 @@ export function MarkerHouse(props: MarkerHouseProps) {
         draggable
       >
         <Popup>
-          <p>{position.lat}</p>
-          <p>{position.lng}</p>          
+          <p>Tu dirección</p>
         </Popup>
       </Marker>
     ))
