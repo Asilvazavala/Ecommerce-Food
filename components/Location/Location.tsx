@@ -1,14 +1,14 @@
- "use client"
+"use client";
 
 import { Map } from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MarkerHouse } from "./MarkerHouse";
+import { MarkerHouse } from './MarkerHouse/MarkerHouse';
 
 export function Location() {
   const coordinatePoint = {
-    lat: 19.42847,
-    lng: -99.12766
+    lat: 20.3928, 
+    lng: -101.1914
   }
 
   const centerMarker = (position: {lat: number, lng: number}, fnMap: Map) => {
@@ -19,23 +19,25 @@ export function Location() {
   }
 
   return (
-    <div className="px-4 py-8 md:py-44 md:px-36">
-      <h4 
-        className="text-center text-secondary"
-        id="location"
-      >
-        Localización
-      </h4>
-      <h2 className="max-w-2xl mx-auto my-4 mb-8 text-3xl font-semibold text-center">Disponibles en todo México, con la comunidad de propiedades más grande dede 2020</h2>
-      <MapContainer 
+    <div className="lg:pl-2 lg:pr-4 relative w-full">
+      <MapContainer
         center={coordinatePoint}
-        zoom={5}
+        zoom={14}
         scrollWheelZoom={false}
-        className="h-[400px] lg:h-[500px]"
+        className="h-[400px] lg:h-[500px] relative z-10"
       >
         <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png" />
+      
         <MarkerHouse selectMarker={centerMarker} />
       </MapContainer>
+      <article className='flex flex-col gap-y-2 justify-center items-center z-50 pt-2 pb-4 bg-Primary 
+      dark:bg-DarkPrimary text-center lg:px-4 '>
+        <p className='text-gray-500 max-[500px]:text-sm'>Mueve el marcador en la entrada de tu dirección para una ubicación más precisa</p>
+        <button className='lg:px-40 px-20 rounded-full py-2 bg-Secondary dark:bg-DarkSecondary lg:hover:outline
+         lg:hover:outline-Accent text-lg font-semibold'>
+          Guardar
+        </button>
+      </article>
     </div>
   )
 }
