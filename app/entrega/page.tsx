@@ -1,3 +1,5 @@
+"use client";
+
 import { Location } from "@/components/Location/Location";
 
 const Deliver = () => {
