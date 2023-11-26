@@ -19,7 +19,7 @@ const Filters: React.FC = () => {
             <button 
               key={filter}
               onClick={() => setCurrentFilter(filter)}
-              className={`border-b-2 py-2 hover:text-Accent transition-colors
+              className={`border-b-2 py-2 lg:hover:text-Accent transition-colors
               ${currentFilter === filter ? 'text-Accent border-Accent font-semibold' : 'border-gray-500'}`}>
               {filter}  
             </button>

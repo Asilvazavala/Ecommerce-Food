@@ -40,7 +40,7 @@ const Cards = () => {
                 onClick={() => handleClick(food.id)}
                 key={food.nombre} 
                 className='bg-Primary dark:bg-DarkPrimary py-5 px-10 lg:py-6 lg:px-12 rounded-xl flex 
-                flex-col items-center gap-2 shadow-md hover:outline hover:outline-Accent 
+                flex-col items-center gap-2 shadow-md lg:hover:outline lg:hover:outline-Accent 
                 cursor-pointer group transition'>
                 <div className='relative'>             
                   <Image
