@@ -11,27 +11,27 @@ const MobileSidebar: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.scrollY;
 
-      if (currentScrollPos > prevScrollPos) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
+  //     if (currentScrollPos > prevScrollPos) {
+  //       setIsVisible(false);
+  //     } else {
+  //       setIsVisible(true);
+  //     }
 
-      setPrevScrollPos(currentScrollPos);
-    };
+  //     setPrevScrollPos(currentScrollPos);
+  //   };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
+  //   if (typeof window !== 'undefined') {
+  //     window.addEventListener('scroll', handleScroll);
   
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
-  }, [prevScrollPos]);
+  //     return () => {
+  //       window.removeEventListener('scroll', handleScroll);
+  //     };
+  //   }
+  // }, [prevScrollPos]);
 
   return (
     <nav className="md:hidden bg-Secondary dark:bg-DarkSecondary block bottom-0 w-full">
