@@ -14,7 +14,7 @@ const Filters: React.FC = () => {
         Filtrar por {currentFilter}
       </h2>
       <div className='flex justify-between'>
-        <nav className='text-gray-500 flex flex-wrap items-center justify-start gap-4 lg:gap-12 text-xs md:text-sm md:mb-4'>
+        <nav className='text-gray-500 flex w-full flex-wrap justify-between md:justify-start md:gap-12 text-xs md:mb-4'>
           {filters.map(filter => (
             <button 
               key={filter}

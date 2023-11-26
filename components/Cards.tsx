@@ -52,9 +52,9 @@ const Cards = () => {
                     className='object-cover aspect-square max-w-[120px] max-h-[120px] md:max-w-[150px] md:max-h-[150px] lg:-mt-28 -mt-[5.5rem] shadow-xl rounded-full z-10'
                   />
                 </div>
-                <h2 className='text-lg text-center font-bold'>{food.nombre}</h2>
+                <h2 className='md:text-lg text-center font-bold'>{food.nombre}</h2>
                 {/* <p className='text-center text-gray-500'>{food.descripcion}</p> */}
-                <span className='text-Accent font-bold text-2xl'>{formatter.format(food.precio)}</span>
+                <span className='text-Accent font-bold text-lg md:text-xl'>{formatter.format(food.precio)}</span>
               </article>
             ))
             : search !== '' 
