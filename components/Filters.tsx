@@ -8,7 +8,11 @@ const Filters: React.FC = () => {
 
   return (
     <section>
-      <h2 id='cardsTitle' className="text-xl mb-2 text-DarkPrimary dark:text-Primary text-center md:text-left">Filtrar por {currentFilter}</h2>
+      <h2 
+        id='cardsTitle' 
+        className="text-xl mb-2 text-DarkPrimary dark:text-Primary text-center md:text-left mt-4 lg:mt-0">
+        Filtrar por {currentFilter}
+      </h2>
       <div className='flex justify-between'>
         <nav className='text-gray-500 flex flex-wrap items-center justify-start gap-4 lg:gap-12 text-xs md:text-sm md:mb-4'>
           {filters.map(filter => (
