@@ -3,7 +3,7 @@
 import { Map } from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MarkerHouse } from './MarkerHouse/MarkerHouse';
+import { MarkerHouse } from './MarkerHouse';
 
 export function Location() {
   const coordinatePoint = {
