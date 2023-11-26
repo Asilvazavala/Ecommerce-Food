@@ -57,6 +57,7 @@ const Carousel = () => {
       clearInterval(intervalId); 
     };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex, changeCarouselImage]);
 
   const handleTouchStart = (e: React.TouchEvent) => {

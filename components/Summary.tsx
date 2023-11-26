@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 
 import { formatter } from '../lib/utils';
@@ -12,6 +12,7 @@ const Summary = () => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
+  const router = useRouter();
 
   useEffect(() => {
     if (searchParams.get("success")) {
@@ -33,7 +34,9 @@ const Summary = () => {
       productIds: items.map((item) => item.id),
     });
 
-    if (typeof window !== 'undefined') window.location = response.data.url;
+    if (typeof window !== 'undefined') {
+      router.push(response.data.url);
+    }
   }
 
   return (

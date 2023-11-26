@@ -8,20 +8,20 @@ import { links } from '../../helpers/constants';
 const MobileSidebar: React.FC = () => {
   const pathname = usePathname();  
 
-  const [isVisible, setIsVisible] = useState<boolean>(true);
-  const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
+  const [isVisibleSidebar, setisVisibleSidebar] = useState<boolean>(true);
+  const [prevScrollPosSidebar, setprevScrollPosSidebar] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
 
-      if (currentScrollPos > prevScrollPos) {
-        setIsVisible(false);
+      if (currentScrollPos > prevScrollPosSidebar) {
+        setisVisibleSidebar(false);
       } else {
-        setIsVisible(true);
+        setisVisibleSidebar(true);
       }
 
-      setPrevScrollPos(currentScrollPos);
+      setprevScrollPosSidebar(currentScrollPos);
     };
 
     if (typeof window !== 'undefined') {
@@ -31,13 +31,13 @@ const MobileSidebar: React.FC = () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [prevScrollPos]);
+  }, [prevScrollPosSidebar]);
 
   return (
     <nav className="md:hidden bg-Secondary dark:bg-DarkSecondary block bottom-0 w-full">
       <ul
         className={`z-50 fixed transition-transform w-full flex justify-between items-center bottom-0 left-0 bg-Primary dark:bg-DarkPrimary text-3xl text-gray-500 dark:text-gray-400 pb-2 px-3
-        ${isVisible ? '' : 'translate-y-20'}`}
+        ${isVisibleSidebar ? '' : 'translate-y-20'}`}
       >
         {
           links.map(link => (
