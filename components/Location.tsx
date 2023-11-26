@@ -1,9 +1,9 @@
 "use client"
 
-import { MapContainer, TileLayer } from 'react-leaflet';
 import { Map } from 'leaflet';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { MarkerHouse } from './MarkerHouse';
+import { MarkerHouse } from './MarkerHouse/MarkerHouse';
 
 export function Location() {
   const coordinatePoint = {
@@ -28,7 +28,7 @@ export function Location() {
       >
         <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png" />
       
-        {/* <MarkerHouse selectMarker={centerMarker} /> */}
+        <MarkerHouse selectMarker={centerMarker} />
       </MapContainer>
       <article className='flex flex-col gap-y-2 justify-center items-center z-50 pt-2 pb-4 bg-Primary 
       dark:bg-DarkPrimary text-center lg:px-4 '>
