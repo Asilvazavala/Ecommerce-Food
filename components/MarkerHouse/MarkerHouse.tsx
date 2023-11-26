@@ -17,7 +17,6 @@ export function MarkerHouse(props: MarkerHouseProps) {
         key={id} 
         position={position} 
         icon={customIcon} 
-        eventHandlers={{click: () => { selectMarker(position, fnMap)}}}
         draggable
       >
         <Popup>

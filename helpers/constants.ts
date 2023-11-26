@@ -50,7 +50,7 @@ export const links = [
   {
     name: 'Entrega',
     icon: FaMotorcycle,
-    href: '/deliver'
+    href: '/entrega'
   },
   {
     name: 'Perfil',
