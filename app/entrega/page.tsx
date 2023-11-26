@@ -1,4 +1,4 @@
-import { Location } from "@/components/Location";
+import { Location } from "@/components/Location/Location";
 
 const Deliver = () => {
   return (
