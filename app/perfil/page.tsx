@@ -1,6 +1,6 @@
 import ToggleTheme from "@/helpers/ToggleTheme";
 
-const Perfil: React.FC = () => {
+const Perfil = () => {
   return (
     <section className='bg-Secondary dark:bg-DarkSecondary w-full px-4 
     flex items-center flex-col md:pl-36 pt-16 md:pt-6 md:items-start'>
