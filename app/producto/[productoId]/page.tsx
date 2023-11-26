@@ -10,9 +10,12 @@ export default function Page() {
   const productoId = router.productoId;
 
   const filteredPage = db.find((product) => product.id === Number(productoId));
-  const relatedProducts = db.filter((product) => product.categoria === filteredPage?.categoria &&
-  product.id !== filteredPage?.id);
-  const relatedProductsSliced = relatedProducts.slice(0, 4)
+
+  const relatedProducts = filteredPage?.categoria === 'Bebidas'
+    ? db.filter((product) => product.categoria === 'Hamburguesas')
+    : db.filter((product) => product.categoria === 'Bebidas')
+
+  const relatedProductsSliced = relatedProducts.slice(0, 4);
   
   return (
     <>
