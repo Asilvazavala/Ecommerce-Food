@@ -21,16 +21,18 @@ const ToggleTheme = () => {
 
   return (
     <div 
+      className='w-full text-lg md:w-[30rem]'
       onClick={toggleDarkMode} 
     >
       <button 
-        className='flex items-center bg-Primary dark:bg-DarkPrimary 
-        rounded-full px-4 py-2 hover:outline hover:outline-Accent mt-4'>
+        className='flex justify-center items-center mt-2 w-full px-4 hover:outline
+        hover:outline-Accent transition py-2 bg-Primary dark:bg-DarkPrimary 
+          rounded-full'>
         { isDarkMode
           ? <LuMoon className='h-4 w-4' />
           : <LuSun className='h-4 w-4' />
         }
-        <span className='ml-1 md:ml-2 text-sm'>
+        <span className='ml-1 md:ml-2'>
           Cambiar Tema
         </span>
       </button>

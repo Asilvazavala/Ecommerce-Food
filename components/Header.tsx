@@ -5,7 +5,7 @@ import { formatedDate } from '../helpers/constants';
 const Header: React.FC = () => {
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-8 pt-10 md:pt-0">
+    <section className="grid grid-cols-1 lg:grid-cols-8 pt-6 md:pt-0">
       <main className="lg:col-span-8">
         <header className="pt-6 pb-6 flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           <article className="text-white text-center md:text-left">

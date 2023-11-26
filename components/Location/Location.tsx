@@ -4,6 +4,7 @@ import { Map } from 'leaflet';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MarkerHouse } from './MarkerHouse/MarkerHouse';
+import toast from 'react-hot-toast';
 
 export function Location() {
   const coordinatePoint = {
@@ -33,7 +34,9 @@ export function Location() {
       <article className='flex flex-col gap-y-2 justify-center items-center z-50 pt-2 pb-4 bg-Primary 
       dark:bg-DarkPrimary text-center lg:px-4 '>
         <p className='text-gray-500 max-[500px]:text-sm'>Mueve el marcador en la entrada de tu dirección para una ubicación más precisa</p>
-        <button className='lg:px-40 px-20 rounded-full py-2 bg-Secondary dark:bg-DarkSecondary lg:hover:outline
+        <button 
+          onClick={() => toast.success("Dirección guardada correctamente 😀")}
+          className='lg:px-40 px-20 rounded-full py-2 bg-Secondary dark:bg-DarkSecondary lg:hover:outline
          lg:hover:outline-Accent text-lg font-semibold'>
           Guardar
         </button>

@@ -41,7 +41,7 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
   }
 
   return (
-    <section className="md:ml-28 pt-8 md:pt-0">
+    <section className="md:ml-28 pt-4 md:pt-0">
       <main className="px-4 py-10 sm:px-6 lg:pr-8 lg:ol-6">
         <article className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-12">
           {/* Galería */}
