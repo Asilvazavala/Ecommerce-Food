@@ -66,8 +66,8 @@ const Perfil = () => {
         </article>
         <button 
           type="submit"
-          className="mt-2 w-full px-4 hover:outline
-        hover:outline-Accent transition py-2 bg-Primary dark:bg-DarkPrimary 
+          className="mt-2 w-full px-4 lg:hover:outline
+          lg:hover:outline-Accent transition py-2 bg-Primary dark:bg-DarkPrimary 
           rounded-full text-lg">
           Guardar cambios
         </button>

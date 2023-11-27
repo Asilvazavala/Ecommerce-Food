@@ -3,136 +3,84 @@
 import { slides } from '../helpers/constants';
 import Image from 'next/image';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { RxDotFilled } from 'react-icons/rx';
-import { useState, useRef, useEffect  } from 'react';
-import Link from 'next/link';
-import { useFoods } from '../hooks/FoodContext';
-
-// import { Billboard as BillboardType } from '@/types/types';
-// interface BillboardProps {
-//   data: BillboardType
-// };
-
-// const Carousel: React.FC<BillboardProps> = ({
-//   data
+import { useState, useEffect  } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 const Carousel = () => {
-  const { setCurrentFilter } = useFoods();
+  const [curr, setCurr] = useState(0);
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [changeCarouselImage, setChangeCarouselImage] = useState<boolean>(true);
-  
-  const [startX, setStartX] = useState(0)
-  const [isMoving, setIsMoving] = useState(false);
-  const carouselRef = useRef(null);
+  const handlers = useSwipeable({
+    onSwipedLeft: () => next(),
+    onSwipedRight: () => prev(),
+    swipeDuration: 500,
+    preventScrollOnSwipe: true,
+    trackMouse: true
+  })
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  }
+  const prev = () => setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
+  const next = () => setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+  const goToSlide = (i: number) => setCurr(i);
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  }
-
-  const goToSlide = (slideIndex: number) => {
-    setCurrentIndex(slideIndex);
-  }
-
-  const startCarousel = () => {
-    if (changeCarouselImage) {
-      setChangeCarouselImage(false); 
-
-      nextSlide();
-    }
-  };
+  const autoSlide = false;
+  const autoSlideInterval = 5000;
 
   useEffect(() => {
-    const intervalId = setInterval(startCarousel, 5000);
+    if (!autoSlide) return
 
-    return () => {
-      clearInterval(intervalId); 
-    };
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndex, changeCarouselImage]);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setStartX(e.touches[0].clientX);
-    setIsMoving(true);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isMoving) return;
-
-    const currentX = e.touches[0].clientX;
-    const diffX = startX - currentX;
-
-    if (diffX > 50) {
-      nextSlide();
-      setIsMoving(false);
-    } else if (diffX < -50) {
-      prevSlide();
-      setIsMoving(false);
-    }
-  };
-
-  const handleTouchEnd = () => {
-    setIsMoving(false);
-  };
+    const slideInterval = setInterval(next, autoSlideInterval)
+    return () => clearInterval(slideInterval)
+  }, [autoSlide])
 
   return (
-    <section 
-      ref={carouselRef}
-      className={`relative group mb-2 max-w-[1400px] w-full overflow-hidden 
-      duration-300 transition-all translate-x-0 scroll-smooth`}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
-      <Link href={"#cardsTitle"} className='overflow-hidden'>
-        <Image
-          onClick={() => setCurrentFilter(slides[currentIndex].categoria)}
-          src={slides[currentIndex].url}
-          width={400}
-          height={200}
-          priority
-          alt={slides[currentIndex].name}  
-          title={slides[currentIndex].name}  
-          onMouseEnter={() => setChangeCarouselImage(false)}
-          onMouseLeave={() => setChangeCarouselImage(true)}
-          className='rounded-lg w-full max-h-[250px] md:max-h-[450px] lg:max-w-[1400px]'
-        />  
-      </Link>  
-      <small 
-        className='hidden lg:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-80%] left-5 
-        text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer hover:bg-Accent transition-colors'>
-        <IoIosArrowBack onClick={prevSlide} />
-      </small>
-
-      <small 
-        className='hidden lg:group-hover:block absolute top-[50%] -translate-x-0 -translate-y-[80%] right-5
-        text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer hover:bg-Accent transition-colors'>
-        <IoIosArrowForward onClick={nextSlide} />
-      </small>
-
-      <footer className='flex top-4 justify-center py-2'>
-        {
+    <main className='overflow-hidden relative group mb-6 lg:mb-10'>
+      <figure 
+        {...handlers}
+        className='flex transition-transform ease-out duration-1000' 
+        style={{ transform: `translateX(-${curr * 100}%)`}}>
+      {
           slides.map((slide, slideIndex) => (
-            <aside 
+            <Image
               key={slideIndex}
-              className={`text-2xl cursor-pointer ${currentIndex === slideIndex ? 'text-Accent' : ''}`}
-              onClick={() => goToSlide(slideIndex)}
-            >
-              <RxDotFilled />
-            </aside>
+              src={slide}
+              width={1000}
+              height={1000}
+              priority
+              alt={slide}  
+              title={slide}  
+              className='rounded-lg min-w-full max-h-[250px] md:max-h-[450px] lg:max-w-[1400px]'
+            />  
           ))
         }
+      </figure>
+
+      <button 
+        onClick={prev} 
+        className='hidden lg:group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-80%] left-5 
+        text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer hover:bg-Accent transition-colors'>
+        <IoIosArrowBack  />
+      </button>
+
+      <button 
+        onClick={next}
+        className='hidden lg:group-hover:block absolute top-[50%] -translate-x-0 -translate-y-[80%] right-5
+        text-2xl rounded-full p-2 bg-black/40 text-white cursor-pointer hover:bg-Accent transition-colors'>
+        <IoIosArrowForward />
+      </button>
+
+      <footer className='mt-2'>
+        <article className='flex items-center justify-center gap-2'>
+          {slides.map((_, i) => (
+            <div 
+              key={i} 
+              onClick={() => goToSlide(i)}
+              className={`transition-all w-2 h-2 bg-black dark:bg-white rounded-full cursor-pointer
+              ${curr === i ? '' : 'dark:bg-opacity-50 opacity-50'}`}>
+
+            </div>
+          ))}
+        </article>
       </footer>
-    </section>
+    </main>
   )
 };
 

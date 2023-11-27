@@ -71,7 +71,7 @@ const Search: React.FC = () => {
             icon={<X size={17} />}
           />
         </article>
-        <SearchResult setOpenSearchBar={setOpenSearchBar} />
+        <SearchResult openSearchBar={openSearchBar} setOpenSearchBar={setOpenSearchBar} />
       </div>
 
       {/* Fondo semitransparente */}

@@ -10,7 +10,7 @@ const Filters: React.FC = () => {
     <section>
       <h2 
         id='cardsTitle' 
-        className="text-xl mb-2 text-DarkPrimary dark:text-Primary text-center md:text-left mt-4 lg:mt-0">
+        className="text-xl mb-2 text-DarkPrimary dark:text-Primary text-center md:text-left lg:mt-0">
         Filtrar por {currentFilter}
       </h2>
       <div className='flex justify-between'>

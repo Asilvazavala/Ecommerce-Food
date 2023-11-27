@@ -27,8 +27,8 @@ const Pedido = () => {
               />
               <button 
                 onClick={() => router.push("/")}
-                className="mt-4 mx-auto md:mx-0 px-4 hover:outline
-                 hover:outline-Accent transition py-2 bg-Primary dark:bg-DarkPrimary 
+                className="mt-4 mx-auto md:mx-0 px-4 lg:hover:outline
+                lg:hover:outline-Accent transition py-2 bg-Primary dark:bg-DarkPrimary 
                  rounded-full text-lg">
                 Seguir comprando
               </button>

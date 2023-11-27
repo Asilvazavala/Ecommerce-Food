@@ -82,7 +82,7 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
 
           <IconButton 
             onClick={() => onClose(!onOpen)}
-            className="m-2 self-end bg-Secondary dark:bg-DarkSecondary" 
+            className="mb-3 bg-Secondary dark:bg-DarkSecondary" 
             icon={<X size={17} />}
           />
         </div>

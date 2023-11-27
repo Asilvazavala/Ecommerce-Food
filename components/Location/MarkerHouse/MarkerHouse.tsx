@@ -20,7 +20,7 @@ export function MarkerHouse(props: MarkerHouseProps) {
         draggable
       >
         <Popup>
-          <p>Tu dirección</p>
+          <p>Enviaremos tu pedido a esta dirección</p>
         </Popup>
       </Marker>
     ))

@@ -6,10 +6,12 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 interface SearchResultProps {
+  openSearchBar: boolean;
   setOpenSearchBar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const SearchResult: React.FC<SearchResultProps> = ({
+  openSearchBar,
   setOpenSearchBar
 }) => {
   const { search, searchResults } = useFoods();
@@ -17,12 +19,12 @@ const SearchResult: React.FC<SearchResultProps> = ({
   const router = useRouter();
 
   const handleSearchResult = (id: number) => {
-    router.push(`/producto/${id}`);
     setOpenSearchBar(false);
+    router.push(`/producto/${id}`);
   }
 
   return (
-    <main className={`w-[85vw] flex-col ${search.length > 0 ? 'flex' : 'hidden'}`}>
+    <main className={`w-[85vw] flex flex-col ${search.length > 0 ? '' : 'hidden'} ${openSearchBar ? '' : 'hidden'}`}>
       <p className="text-gray-500 my-8 border-b border-gray-500">{searchResults.length} {searchResults.length === 1 ? 'RESULTADO' : 'RESULTADOS'}</p>
       {searchResults.length === 0 && <p className="text-red-800 bg-red-300 px-4 py-2 w-fit rounded-full">
         No hay resultados para esta búsqueda</p>}

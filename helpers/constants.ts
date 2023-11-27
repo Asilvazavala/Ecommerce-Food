@@ -14,21 +14,9 @@ export const formatedDate = `${day} ${months[month]} del ${year}`;
 
 // Carrousel
 export const slides = [
-  {
-    url: '/images/Carrusel/hamburguesas.webp',
-    name:" Promo 1",
-    categoria: 'Hamburguesas'
-  },
-  {
-    url: '/images/Carrusel/paquetes.webp',
-    name:" Promo 2",
-    categoria: 'Paquetes'
-  },
-  {
-    url: '/images/Carrusel/alitas.webp',
-    name:" Promo 3",
-    categoria: 'Snacks'
-  },
+  '/images/Carrusel/hamburguesas.webp',
+  '/images/Carrusel/paquetes.webp',
+  '/images/Carrusel/alitas.webp',
 ]
 
 // Sidebar
