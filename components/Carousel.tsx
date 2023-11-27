@@ -12,7 +12,7 @@ const Carousel = () => {
   const handlers = useSwipeable({
     onSwipedLeft: () => next(),
     onSwipedRight: () => prev(),
-    swipeDuration: 500,
+    swipeDuration: 250,
     preventScrollOnSwipe: true,
     trackMouse: true
   })

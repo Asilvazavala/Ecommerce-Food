@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`dark ${montserrat.className}`}>
+      <body className={`dark ${montserrat.className} lg:overflow-x-hidden`}>
         <FoodProvider>
           <Sidebar />
           <MobileNavbar />
