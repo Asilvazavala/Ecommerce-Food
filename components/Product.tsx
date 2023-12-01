@@ -22,7 +22,7 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
-    cart.addItem({ ...producto, cantidad: quantity });
+    cart.addItem({ ...producto, cantidad: quantity.toString() });
   }
 
   const handleAddQuantity = (quantity: number) => {
