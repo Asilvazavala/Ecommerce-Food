@@ -4,11 +4,11 @@ import Image from 'next/image';
 import { FaRegTrashAlt } from "react-icons/fa";
 
 import useCart from '@/hooks/use-cart';
-import { APIArracheraBurger } from '@/types/types';
+import { Product } from '@/types/types';
 import { formatter } from '../lib/utils';
 
 interface CartItemsProps {
-  data: APIArracheraBurger;
+  data: Product;
 };
 
 const CartItem: React.FC<CartItemsProps> = ({
@@ -20,12 +20,12 @@ const CartItem: React.FC<CartItemsProps> = ({
     cart.removeItem(String(data.id))
   }
 
-  const handleAddQuantity = (producto: APIArracheraBurger) => {
+  const handleAddQuantity = (producto: Product) => {
     cart.addQuantity(producto);
   }
   
-  const handleRemoveQuantity = (quantity: number, producto: APIArracheraBurger) => {
-    if (quantity < 2) return;
+  const handleRemoveQuantity = (quantity: string, producto: Product) => {
+    if (Number(quantity) < 2) return;
     cart.removeQuantity(producto);
   }
 
@@ -38,14 +38,14 @@ const CartItem: React.FC<CartItemsProps> = ({
       <Image 
         width={400}
         height={400}
-        src={data.imagen}
-        alt={data.nombre}
+        src={data.images[0].url}
+        alt={data.name}
         className='object-cover object-center h-20 max-w-[90px] rounded'
       />
       
       <div className="ml-2 mr-4 w-full">
-        <h3 className="font-semibold">{data.nombre}</h3>
-        <span className="text-Accent font-semibold">{formatter.format(data.precio)}</span>
+        <h3 className="font-semibold">{data.name}</h3>
+        <span className="text-Accent font-semibold">{formatter.format(Number(data.price))}</span>
       </div>
 
       <aside className="relative w-full max-w-[80%]">

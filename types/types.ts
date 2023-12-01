@@ -9,6 +9,18 @@ export type APIArracheraBurger = {
   precio:      number;
 }
 
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  images: Image[];
+  category: Category;
+  price: string;
+  cantidad: string;
+  isFeatured: boolean;
+  size: Size;
+};
+
 export interface Billboard {
   id: string;
   label: string;
@@ -19,16 +31,6 @@ export interface Category {
   id: string;
   name: string;
   billboard: Billboard;
-};
-
-export interface Product {
-  id: string;
-  category: Category;
-  name: string;
-  price: string;
-  isFeatured: boolean;
-  size: Size;
-  images: Image[];
 };
 
 export interface Image {

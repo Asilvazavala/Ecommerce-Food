@@ -8,7 +8,7 @@ import useCart from "@/hooks/use-cart";
 import Image from 'next/image';
 import { formatter } from '../../lib/utils';
 import { useRouter } from "next/navigation";
-import { APIArracheraBurger } from "@/types/types";
+import { Product } from "@/types/types";
 import { useEffect } from 'react';
 
 interface SidebarCartProps {
@@ -39,19 +39,19 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
   }
 
   const totalPrice = items.reduce((total, item) => {
-    return total + Number(item.precio * item.cantidad)
+    return total + Number(item.price) * Number(item.cantidad)
   }, 0);
 
-  const onRemove = (id: number) => {
+  const onRemove = (id: string) => {
     cart.removeItem(String(id))
   }
 
-  const handleAddQuantity = (producto: APIArracheraBurger) => {
+  const handleAddQuantity = (producto: Product) => {
     cart.addQuantity(producto);
   }
   
-  const handleRemoveQuantity = (quantity: number, producto: APIArracheraBurger) => {
-    if (quantity < 2) return;
+  const handleRemoveQuantity = (quantity: string, producto: Product) => {
+    if (Number(quantity) < 2) return;
     cart.removeQuantity(producto);
   }
 
@@ -97,14 +97,14 @@ const SidebarCart: React.FC<SidebarCartProps> = ({
                 <Image 
                   width={400}
                   height={400}
-                  src={item.imagen}
-                  alt={item.nombre}
+                  src={item.images[0].url}
+                  alt={item.name}
                   className='object-cover object-center h-20 max-w-[90px] rounded'
                 />
                 
                 <div className="ml-2 mr-4">
-                  <h3 className="font-semibold">{item.nombre}</h3>
-                  <span className="text-Accent font-semibold">{formatter.format(item.precio)}</span>
+                  <h3 className="font-semibold">{item.name}</h3>
+                  <span className="text-Accent font-semibold">{formatter.format(Number(item.price))}</span>
                 </div>
 
                 <aside className="relative w-full">

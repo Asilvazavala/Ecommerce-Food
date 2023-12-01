@@ -9,21 +9,24 @@ import ToastProvider from '@/providers/toastProvider';
 import CartIcon from '@/components/CartIcon';
 import Footer from '@/components/Footer';
 import Search from '@/components/Search';
+import getProducts from '@/actions/get-products';
 
 export const metadata: Metadata = {
   title: 'Arrachera burger',
   description: 'Arrachera burger',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const products = await getProducts({ isFeatured: true });
+  
   return (
     <html lang="es">
-      <body className={`dark ${montserrat.className} lg:overflow-x-hidden`}>
-        <FoodProvider>
+      <body className={`dark ${montserrat.className} lg:overflow-x-hidden max-w-[1400px]`}>
+        <FoodProvider initialProducts={products}>
           <Sidebar />
           <MobileNavbar />
           <Search />

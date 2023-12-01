@@ -1,21 +1,20 @@
 "use client";
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { APIArracheraBurger } from '../types/types';
-import db from '../api/data.json';
+import { Product } from '../types/types';
 
 // Define el tipo para el contexto
 type FoodContextType = {
-  currentFoodData: APIArracheraBurger[];
-  setCurrentFoodData: React.Dispatch<React.SetStateAction<APIArracheraBurger[]>>;
+  currentFoodData: Product[];
+  setCurrentFoodData: React.Dispatch<React.SetStateAction<Product[]>>;
   currentFilter: string | null;
   setCurrentFilter: React.Dispatch<React.SetStateAction<string | null>>;
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
-  searchResults: APIArracheraBurger[];
-  setSearchResults: React.Dispatch<React.SetStateAction<APIArracheraBurger[]>>;
-  detailsFood: APIArracheraBurger | undefined;
-  setDetailsFood: React.Dispatch<React.SetStateAction<APIArracheraBurger | undefined>>;
+  searchResults: Product[];
+  setSearchResults: React.Dispatch<React.SetStateAction<Product[]>>;
+  detailsFood: Product | undefined;
+  setDetailsFood: React.Dispatch<React.SetStateAction<Product | undefined>>;
   isDarkMode: boolean;
   setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -35,29 +34,27 @@ export function useFoods () {
 // Proveedor de contexto
 type FoodProviderProps = {
   children: ReactNode;
+  initialProducts: Product[];
 };
 
-export function FoodProvider({ children }: FoodProviderProps) {
-  const [currentFoodData, setCurrentFoodData] = useState<APIArracheraBurger[]>([]);
+export function FoodProvider({ children, initialProducts }: FoodProviderProps) {
+  const [currentFoodData, setCurrentFoodData] = useState<Product[]>([]);
   const [currentFilter, setCurrentFilter] = useState<string | null>('Hamburguesas');
   const [search, setSearch] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<APIArracheraBurger[]>([]);
-  const [detailsFood, setDetailsFood] = useState<APIArracheraBurger | undefined>();
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
+  const [detailsFood, setDetailsFood] = useState<Product | undefined>();
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const data: APIArracheraBurger[] = db as APIArracheraBurger[];
-
   useEffect(() => {
-    const onFilter = data.filter((food) =>food.categoria === currentFilter);
-
+    const onFilter = initialProducts.filter((food) => food.category.name === currentFilter);
     const onSearch = search !== ''
-      ? data.filter((food) => food.nombre.toLowerCase().includes(search.toLowerCase()))
-      : []
+      ? initialProducts.filter((food) => food.name.toLowerCase().includes(search.toLowerCase()))
+      : [];
 
     setCurrentFoodData(onFilter);
     setSearchResults(onSearch);
-    
-  }, [currentFilter, search, data]);
+
+  }, [currentFilter, search, initialProducts]);
 
   const value: FoodContextType = {
     currentFoodData,

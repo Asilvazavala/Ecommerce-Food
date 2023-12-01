@@ -41,9 +41,10 @@ const Search: React.FC = () => {
         />
       </button>
 
-      <div className={`fixed top-[3.1rem] md:top-[6rem] left-0 md:left-28 md:right-7 h-20 md:h-24 bg-Primary
-       dark:bg-DarkPrimary duration-500 w-full md:w-[83vw] lg:w-[90vw] px-4 md:pl-8 ${search.length > 0 ? 'h-[30rem] md:h-72' : 'md:h-24 '}
-      ${openSearchBar 
+      <div className={`fixed top-[3.1rem] md:top-[6rem] left-0 md:left-28 md:right-7 h-20 md:h-24 
+      bg-Primary dark:bg-DarkPrimary duration-500 w-full md:w-[83vw] lg:w-[90vw] px-4 md:pl-8 
+       ${search.length > 0 && openSearchBar !== false ? 'h-[30rem] md:h-72' : 'md:h-24 '}
+       ${openSearchBar 
         ? 'translate-y-0 opacity-100 z-50 overflow-x-hidden' 
         : '-translate-y-20 opacity-0 -z-10'}`}>
         <article className="flex justify-between items-center gap-x-2 md:gap-x-4 mt-6">
@@ -56,7 +57,6 @@ const Search: React.FC = () => {
                 ref={inputRef}
                 type="text" 
                 value={search}
-                autoFocus={openSearchBar === true}
                 onChange={(e) => setSearch(e.target.value)}
                 className='bg-white w-full py-1 lg:py-2 pl-10 pr-4 rounded-sm lg:rounded-lg 
                 outline-none shadow-md '

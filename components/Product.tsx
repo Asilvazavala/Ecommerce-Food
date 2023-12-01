@@ -1,27 +1,21 @@
 "use client";
 
-import getProduct from "@/actions/get-a-product";
-import getProducts from "@/actions/get-products";
 import Image from "next/image";
 import { formatter } from '../lib/utils';
 import { FaCartPlus } from "react-icons/fa";
-import { APIArracheraBurger } from '../types/types';
+import { Product } from '../types/types';
 import { MouseEventHandler } from "react";
 import useCart from "@/hooks/use-cart";
 import Link from 'next/link';
 import { useState } from 'react';
 
 interface ProductPageProps {
-  producto: APIArracheraBurger;
-  relatedProducts: APIArracheraBurger[];
+  producto: Product;
+  suggestedProductsSliced: Product[];
 }
 
 const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
-  // const product = await getProduct(params.productId);
-  // const suggestedProducts = await getProducts({
-  //   categoryId: product?.category?.id
-  // })
-  const { producto, relatedProducts } = props;
+  const { producto, suggestedProductsSliced } = props;
   const cart = useCart();
 
   const [quantity, setQuantity] = useState(1);
@@ -46,16 +40,16 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
         <article className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-12">
           {/* Galería */}
           <Image 
-            src={producto.imagen}
-            alt={producto.nombre}
+            src={producto.images[0].url}
+            alt={producto.name}
             width={500}
             height={500}
             className="rounded-lg w-full h-[200px] md:h-[400px] bg-cover"
           />
           <header className="mt-4 sm:mt-8 lg:mt-0 flex items-start flex-col gap-y-2">
             {/* Info */}
-            <h2 className="text-3xl font-semibold lg:max-w-[80%]">{producto.nombre}</h2>
-            <p className="text-gray-500 text-lg md:mt-10">{producto.descripcionLarga}</p>
+            <h2 className="text-3xl font-semibold lg:max-w-[80%]">{producto.name}</h2>
+            <p className="text-gray-500 text-lg md:mt-10">{producto.description}</p>
             
             <div className="flex gap-y-2 md:flex-row flex-col items-center justify-between w-full text-2xl my-2 md:my-6">
               <p>Cantidad</p>
@@ -73,7 +67,7 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
                 </button>
               </aside>
               <p className="text-Accent font-semibold my-2 md:my-4">
-                {formatter.format(producto.precio)}
+                {formatter.format(Number(producto.price))}
               </p>
             </div>
 
@@ -92,7 +86,7 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
         <article className="mt-8">
           <h2 className="text-3xl font-semibold mb-24 lg:mb-20">Puedes acompañar con</h2>
           <aside className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 items-start gap-x-8 gap-y-24 md:gap-y-20">
-            {relatedProducts.map(relatedProduct => (
+            {suggestedProductsSliced.map(relatedProduct => (
               <Link
                 href={`/producto/${relatedProduct.id}`}
                 className='bg-Primary dark:bg-DarkPrimary py-5 px-10 lg:py-6 min-h-full lg:px-12 rounded-xl flex 
@@ -100,15 +94,15 @@ const ProductPage: React.FC<ProductPageProps> = (props: ProductPageProps) => {
                 cursor-pointer group transition' 
                 key={relatedProduct.id}>
                 <Image 
-                  src={relatedProduct.imagen}
-                  alt={relatedProduct.nombre}
+                  src={relatedProduct.images[0].url}
+                  alt={relatedProduct.name}
                   width={100}
                   height={100}
                   className="object-cover aspect-square max-w-[100px] max-h-[100px] md:max-w-[120px] 
                   md:max-h-[120px] lg:-mt-20 -mt-[4.5rem] shadow-xl rounded-full z-10"
                 />
-                <p className="text-center font-bold">{relatedProduct.nombre}</p>
-                <span className="text-Accent text-lg font-semibold">{formatter.format(relatedProduct.precio)}</span>
+                <p className="text-center font-bold">{relatedProduct.name}</p>
+                <span className="text-Accent text-lg font-semibold">{formatter.format(Number(relatedProduct.price))}</span>
               </Link>
             ))}
           </aside>

@@ -18,13 +18,13 @@ const SearchResult: React.FC<SearchResultProps> = ({
 
   const router = useRouter();
 
-  const handleSearchResult = (id: number) => {
-    setOpenSearchBar(false);
+  const handleSearchResult = (id: string) => {
+    setOpenSearchBar(!openSearchBar);
     router.push(`/producto/${id}`);
   }
 
   return (
-    <main className={`w-[85vw] flex flex-col ${search.length > 0 ? '' : 'hidden'} ${openSearchBar ? '' : 'hidden'}`}>
+    <main className={`w-[85vw] flex flex-col ${search.length === 0 || openSearchBar === false ? 'hidden' : ''}`}>
       <p className="text-gray-500 my-8 border-b border-gray-500">{searchResults.length} {searchResults.length === 1 ? 'RESULTADO' : 'RESULTADOS'}</p>
       {searchResults.length === 0 && <p className="text-red-800 bg-red-300 px-4 py-2 w-fit rounded-full">
         No hay resultados para esta búsqueda</p>}
@@ -35,15 +35,15 @@ const SearchResult: React.FC<SearchResultProps> = ({
             className="flex flex-col cursor-pointer w-fit" 
             key={product.id}>
             <Image 
-              src={product.imagen}
-              alt={product.nombre}
-              title={product.nombre}
+              src={product.images[0].url}
+              alt={product.name}
+              title={product.name}
               width={100}
               height={100}
               className="w-32 h-20 object-cover rounded mb-1"
             />
-            <span className="text-white">{product.nombre}</span>
-            <span className="text-Accent font-semibold mb-2">{formatter.format(product.precio)}</span>
+            <span className="text-white">{product.name}</span>
+            <span className="text-Accent font-semibold mb-2">{formatter.format(Number(product.price))}</span>
           </article>
         ))}
       </div>

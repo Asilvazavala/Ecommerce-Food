@@ -26,12 +26,12 @@ const Summary = () => {
   }, [searchParams, removeAll])
 
   const totalPrice = items.reduce((total, item) => {
-    return total + Number(item.precio * item.cantidad)
+    return total + Number(item.price) * Number(item.cantidad)
   }, 0);
 
   const onCheckout = async () => {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
-      productIds: ['fb5170ba-0326-4419-b300-b39dc50c1649'],
+      productIds: items.map((item) => item.id),
     });
 
     if (typeof window !== 'undefined') {
@@ -50,8 +50,8 @@ const Summary = () => {
             key={product.id}
           >
             <p>{product.cantidad}</p>
-            <p>{product.nombre}</p>
-            <p>{formatter.format(product.precio * product.cantidad)}</p>
+            <p>{product.name}</p>
+            <p>{formatter.format(Number(product.price) * Number(product.cantidad))}</p>
           </article>
         ))}
 

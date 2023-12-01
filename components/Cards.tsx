@@ -6,28 +6,13 @@ import Loading from './Loading';
 import { useRouter } from 'next/navigation';
 import { formatter } from '../lib/utils';
 
-import { APIArracheraBurger, Product } from '@/types/types';
-import useCart from '@/hooks/use-cart';
-
-interface ProductListProps {
-  items: Product[];
-}
-
-// const Cards: React.FC<ProductListProps> = ({
-//   items
-// }) => {
 const Cards = () => {
   const { currentFoodData, search, currentFilter } = useFoods();
-  const cart = useCart();
 
   const router = useRouter();
 
-  const handleClick = (id: number) => {
+  const handleClick = (id: string) => {
     router.push(`/producto/${id}`);
-  }
-
-  const onAddToCart = (producto: APIArracheraBurger) => {
-    cart.addItem(producto)
   }
 
   return (
@@ -38,23 +23,22 @@ const Cards = () => {
             ? currentFoodData.map((food) => (
               <article 
                 onClick={() => handleClick(food.id)}
-                key={food.nombre} 
+                key={food.images[0].url} 
                 className='bg-Primary dark:bg-DarkPrimary py-5 px-10 lg:py-6 lg:px-12 rounded-xl flex 
                 flex-col items-center gap-2 shadow-md lg:hover:outline lg:hover:outline-Accent 
                 cursor-pointer group transition'>
                 <div className='relative'>             
                   <Image
-                    src={food.imagen}
+                    src={food.images[0].url}
                     width={150}
                     height={150}
-                    alt={food.nombre}  
-                    title={food.nombre}  
+                    alt={food.name}  
+                    title={food.name}  
                     className='object-cover aspect-square max-w-[120px] max-h-[120px] md:max-w-[150px] md:max-h-[150px] lg:-mt-28 -mt-[5.5rem] shadow-xl rounded-full z-10'
                   />
                 </div>
-                <h2 className='md:text-lg text-center font-bold'>{food.nombre}</h2>
-                {/* <p className='text-center text-gray-500'>{food.descripcion}</p> */}
-                <span className='text-Accent font-bold text-lg md:text-xl'>{formatter.format(food.precio)}</span>
+                <h2 className='md:text-lg text-center font-bold'>{food.name}</h2>
+                <span className='text-Accent font-bold text-lg md:text-xl'>{formatter.format(Number(food.price))}</span>
               </article>
             ))
             : search !== '' 

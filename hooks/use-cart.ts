@@ -1,24 +1,24 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-import { APIArracheraBurger, Product } from '@/types/types';
+import { Product } from '@/types/types';
 import toast from 'react-hot-toast';
 
 interface CartStore {
-  items: APIArracheraBurger[];
-  addItem: (data: APIArracheraBurger) => void;
+  items: Product[];
+  addItem: (data: Product) => void;
   removeItem: (id: string) => void;
   removeAll: () => void;
-  addQuantity: (data: APIArracheraBurger) => void;
-  removeQuantity: (data: APIArracheraBurger) => void;
+  addQuantity: (data: Product) => void;
+  removeQuantity: (data: Product) => void;
 }
 
 const useCart = create(
   persist<CartStore>((set, get) => ({
     items: [],
-    addItem: (data: APIArracheraBurger) => {
+    addItem: (data: Product) => {
       const currentItems = get().items;
-      const existingItem = currentItems.find((item) => item.id === Number(data.id));
+      const existingItem = currentItems.find((item) => item.id === data.id);
 
       if (existingItem) {
         return toast("El producto ya está en el carrito");
@@ -29,16 +29,16 @@ const useCart = create(
     },
 
     removeItem: (id: string) => {
-      set({ items: [...get().items.filter((item) => item.id !== Number(id))] });
+      set({ items: [...get().items.filter((item) => item.id !== id)] });
       toast.success("Producto eliminado del carrito.");
     },
 
     removeAll: () => set({ items: [] }),
 
-    addQuantity: (data: APIArracheraBurger) => {
+    addQuantity: (data: Product) => {
       const currentItems = get().items;
       const updatedItems = currentItems.map((item) =>
-        item.id === Number(data.id)
+        item.id === data.id
           ? { ...item, cantidad: item.cantidad + 1 }
           : item
       );
@@ -46,10 +46,10 @@ const useCart = create(
       set({ items: updatedItems });
     },
 
-    removeQuantity: (data: APIArracheraBurger) => {      
+    removeQuantity: (data: Product) => {      
       const currentItems = get().items;
       const updatedItems = currentItems.map((item) =>
-        item.id === Number(data.id)
+        item.id === data.id
           ? { ...item, cantidad: item.cantidad - 1 }
           : item
       );
