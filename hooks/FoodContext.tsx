@@ -5,6 +5,7 @@ import { Product } from '../types/types';
 
 // Define el tipo para el contexto
 type FoodContextType = {
+  initialProducts: Product[];
   currentFoodData: Product[];
   setCurrentFoodData: React.Dispatch<React.SetStateAction<Product[]>>;
   currentFilter: string | null;
@@ -57,6 +58,7 @@ export function FoodProvider({ children, initialProducts }: FoodProviderProps) {
   }, [currentFilter, search, initialProducts]);
 
   const value: FoodContextType = {
+    initialProducts,
     currentFoodData,
     setCurrentFoodData,
     currentFilter,

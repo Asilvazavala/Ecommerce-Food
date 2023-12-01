@@ -10,13 +10,13 @@ export default function Page() {
   const router = useParams();
   const productoId = router.productoId;
 
-  const { currentFoodData } = useFoods();
+  const { initialProducts } = useFoods();
 
-  const filteredPage = currentFoodData.find((product) => product.id === (productoId));
+  const filteredPage = initialProducts.find((product) => product.id === (productoId));
 
   const relatedProducts = filteredPage?.category.name === 'Bebidas'
-    ? currentFoodData.filter((product) => product.category.name === 'Hamburguesas')
-    : currentFoodData.filter((product) => product.category.name === 'Bebidas')
+    ? initialProducts.filter((product) => product.category.name === 'Hamburguesas')
+    : initialProducts.filter((product) => product.category.name === 'Bebidas')
 
   const suggestedProductsSliced = relatedProducts.slice(0, 4);
   
