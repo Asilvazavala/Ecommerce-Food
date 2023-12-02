@@ -32,7 +32,7 @@ const Carousel = () => {
   }, [autoSlide])
 
   return (
-    <main className='overflow-hidden relative group mb-6 lg:mb-10 z-10'>
+    <main className='overflow-hidden relative group mb-6 lg:mb-10'>
       <figure 
         {...handlers}
         className='flex transition-transform ease-out duration-1000' 
