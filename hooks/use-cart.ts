@@ -39,7 +39,7 @@ const useCart = create(
       const currentItems = get().items;
       const updatedItems = currentItems.map((item) =>
         item.id === data.id
-          ? { ...item, cantidad: item.cantidad + 1 }
+          ? { ...item, cantidad: (Number(item.cantidad ) + 1).toString() }
           : item
       );
     
