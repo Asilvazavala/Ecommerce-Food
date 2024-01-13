@@ -64,7 +64,7 @@ const Perfil = () => {
             onChange={handleChange}
             required
             autoComplete="name"
-            placeholder="Requerido"
+            placeholder="Juan"
             className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
@@ -79,7 +79,7 @@ const Perfil = () => {
             onChange={handleChange}
             required
             autoComplete="name"
-            placeholder="Requerido"
+            placeholder="García"
             className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
@@ -93,7 +93,7 @@ const Perfil = () => {
             onChange={handleChange}
             required
             autoComplete="email"
-            placeholder="Requerido"
+            placeholder="tucorreo@mail.com"
             className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
@@ -108,7 +108,7 @@ const Perfil = () => {
             onChange={handleChange}
             required
             autoComplete="email"
-            placeholder="Requerido"
+            placeholder="tucorreo@mail.com"
             className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
@@ -123,7 +123,7 @@ const Perfil = () => {
             onChange={handleChange}
             required
             autoComplete="phone"
-            placeholder="Requerido"
+            placeholder="456123456"
             className="p-2 rounded-sm md:w-72 text-black"
           />
         </article>
