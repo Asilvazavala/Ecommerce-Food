@@ -25,7 +25,8 @@ export default async function RootLayout({
   
   return (
     <html lang="es">
-      <body className={`dark ${montserrat.className} lg:overflow-x-hidden max-w-[1400px]`}>
+      <body className={`dark ${montserrat.className} lg:overflow-x-hidden flex flex-col 
+      justify-center max-w-[1400px]`}>
         <FoodProvider initialProducts={products}>
           <Sidebar />
           <MobileNavbar />

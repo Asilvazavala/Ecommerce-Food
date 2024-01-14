@@ -18,9 +18,10 @@ const CartIcon: React.FC = () => {
     <section className='relative'>
       <button 
         onClick={() => setOpenSidebar(!openSidebar)}
-        className='hidden md:flex items-center bg-Primary dark:bg-DarkPrimary 
-        rounded-full px-4 py-2 hover:outline hover:outline-Accent
-        fixed right-7 top-8 z-10 md:custom-fixed-cartIcon'>
+        className='hidden items-center bg-Primary dark:bg-DarkPrimary 
+        rounded-full px-4 py-2 hover:outline w-fit fixed right-7 top-8 z-10
+        md:flex md:custom-fixed-cartIcon xl:right-auto lg:hover:outline-Accent
+        xl:ml-[1160px]'>
         <ShoppingBag
           size={20}
           className='text-Accent font-bold'

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <section className='bg-Primary dark:bg-DarkPrimary w-full mt-32 px-4 py-10 flex flex-col
     gap-10 justify-center items-center flex-wrap md:justify-between md:ml-28 
-    md:pr-40 md:items-center md:flex-row max-w-[1400px]'>
+    md:pr-40 md:items-center md:flex-row'>
       <article className='flex flex-col gap-4'>
         <picture className='flex items-center justify-center'>
           <Link href={"/"}>
