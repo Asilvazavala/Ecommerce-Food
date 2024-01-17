@@ -22,7 +22,7 @@ const Footer = () => {
             />
           </Link>
         </picture>
-        {/* <aside className="flex justify-center items-center gap-4 text-3xl">
+        <aside className="flex justify-center items-center gap-4 text-3xl">
           <Link
             href="https://as-work.vercel.app/"
             target="_blank"
@@ -54,7 +54,7 @@ const Footer = () => {
           >
             Antonio Silva
           </Link>
-        </span> */}
+        </span>
       </article>
 
       <article className="flex flex-col gap-2 justify-center text-center items-center">
