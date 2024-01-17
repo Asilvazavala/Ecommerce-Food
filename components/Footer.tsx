@@ -3,7 +3,7 @@ import Logo from "../public/images/Logo.png";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaBriefcase } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <section
       className="bg-Primary dark:bg-DarkPrimary w-full mt-32 px-4 py-10 flex flex-col
